@@ -55,13 +55,13 @@ const AddProduct: React.FC<Props> = () => {
   const [description, setDescription] = useState(data.description);
   React.useEffect(() => {
     register({ name: 'type' });
-    register({ name: 'categories' });
+    register({ name: 'categories.tsx' });
     register({ name: 'image' });
     register({ name: 'description' });
   }, [register]);
 
   const handleMultiChange = ({ value }) => {
-    setValue('categories', value);
+    setValue('categories.tsx', value);
     setTag(value);
   };
   const handleDescriptionChange = e => {

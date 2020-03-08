@@ -11,6 +11,7 @@ const main = async () => {
   const schema = await buildSchema({
     resolvers: [__dirname + '/**/*.resolver.ts'],
   });
+  console.log([__dirname + '/**/*.resolver.ts'])
 
   const apolloServer = new ApolloServer({
     schema,

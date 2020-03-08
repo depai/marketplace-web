@@ -17,7 +17,7 @@ type Props = {
   };
 };
 const CheckoutPage: NextPage<Props> = ({ deviceType }) => {
-  const { data, error, loading } = useQuery(GET_LOGGED_IN_CUSTOMER);
+const { data, error, loading } = useQuery(GET_LOGGED_IN_CUSTOMER);
   if (loading) {
     return <div>loading...</div>;
   }

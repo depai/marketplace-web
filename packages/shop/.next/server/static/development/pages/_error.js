@@ -94,9 +94,9 @@ module.exports =
 /******/ ({
 
 /***/ "../../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js":
-/*!*****************************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js ***!
-  \*****************************************************************************************************************/
+/*!*********************************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -111,9 +111,9 @@ module.exports = _interopRequireDefault;
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/amp-context.js":
-/*!**************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/amp-context.js ***!
-  \**************************************************************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/amp-context.js ***!
+  \******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -139,9 +139,9 @@ exports.AmpStateContext = React.createContext({});
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/amp.js":
-/*!******************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/amp.js ***!
-  \******************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/amp.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -182,9 +182,9 @@ exports.useAmp = useAmp;
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/head-manager-context.js":
-/*!***********************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/head-manager-context.js ***!
-  \***********************************************************************************************************/
+/*!***************************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/head-manager-context.js ***!
+  \***************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -210,9 +210,9 @@ exports.HeadManagerContext = React.createContext(null);
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/head.js":
-/*!*******************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/head.js ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/head.js ***!
+  \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -383,9 +383,9 @@ exports.default = Head;
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/side-effect.js":
-/*!**************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/side-effect.js ***!
-  \**************************************************************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/side-effect.js ***!
+  \******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -454,9 +454,9 @@ exports.default = () => {
 /***/ }),
 
 /***/ "../../node_modules/next/dist/pages/_error.js":
-/*!***********************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/pages/_error.js ***!
-  \***********************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/pages/_error.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

@@ -102,7 +102,7 @@ const AddProduct: React.FC<Props> = props => {
 
   React.useEffect(() => {
     register({ name: 'type' });
-    register({ name: 'categories' });
+    register({ name: 'categories.tsx' });
     register({ name: 'image', required: true });
     register({ name: 'description' });
   }, [register]);
@@ -133,7 +133,7 @@ const AddProduct: React.FC<Props> = props => {
     },
   });
   const handleMultiChange = ({ value }) => {
-    setValue('categories', value);
+    setValue('categories.tsx', value);
     setTag(value);
   };
 

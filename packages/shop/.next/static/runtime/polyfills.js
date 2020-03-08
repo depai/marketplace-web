@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/runtime/polyfills.js"],{
 
 /***/ "../../node_modules/next/dist/client/polyfills.js":
-/*!***************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/client/polyfills.js ***!
-  \***************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/client/polyfills.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -50,9 +50,9 @@ module.exports = g;
 /***/ }),
 
 /***/ "../../node_modules/object-assign/index.js":
-/*!********************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/object-assign/index.js ***!
-  \********************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/object-assign/index.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -152,9 +152,9 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /***/ }),
 
 /***/ "../../node_modules/url-polyfill/url-polyfill.js":
-/*!**************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/url-polyfill/url-polyfill.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/url-polyfill/url-polyfill.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -647,9 +647,9 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /***/ }),
 
 /***/ "../../node_modules/whatwg-fetch/dist/fetch.umd.js":
-/*!****************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/whatwg-fetch/dist/fetch.umd.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/whatwg-fetch/dist/fetch.umd.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

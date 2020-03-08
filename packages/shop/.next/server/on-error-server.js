@@ -94,9 +94,9 @@ module.exports =
 /******/ ({
 
 /***/ "../../node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-error-server!./":
-/*!******************************************************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-error-server ***!
-  \******************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-error-server ***!
+  \**********************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

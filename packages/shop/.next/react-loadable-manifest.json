@@ -1,102 +1,4 @@
 {
-  "../QuickView/QuickView": [
-    {
-      "id": "../../node_modules/rc-table/assets/index.css",
-      "name": "../../node_modules/rc-table/assets/index.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 1,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/rc-collapse/assets/index.css",
-      "name": "../../node_modules/rc-collapse/assets/index.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 2,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/react-multi-carousel/lib/styles.css",
-      "name": "../../node_modules/react-multi-carousel/lib/styles.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 3,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/@redq/reuse-modal/lib/index.css",
-      "name": "../../node_modules/@redq/reuse-modal/lib/index.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 4,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "../../node_modules/rc-drawer/assets/index.css",
-      "name": "../../node_modules/rc-drawer/assets/index.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 5,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "./components/MultiCarousel/MultiCarousel.style.css",
-      "name": "./components/MultiCarousel/MultiCarousel.style.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 7,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "./components/MultiCarousel/MultiCarousel.tsx",
-      "name": "./components/MultiCarousel/MultiCarousel.tsx",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./components/Truncate/Truncate.tsx",
-      "name": "./components/Truncate/Truncate.tsx",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./containers/QuickView/QuickView.style.tsx",
-      "name": "./containers/QuickView/QuickView.style.tsx",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    },
-    {
-      "id": "./containers/QuickView/QuickView.tsx",
-      "name": "./containers/QuickView/QuickView.tsx",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
-    }
-  ],
   "./Header/MobileHeader": [
     {
       "id": "../../node_modules/rc-table/assets/index.css",
@@ -154,18 +56,6 @@
     },
     {
       "id": 5,
-      "name": null,
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": "./components/MultiCarousel/MultiCarousel.style.css",
-      "name": "./components/MultiCarousel/MultiCarousel.style.css",
-      "file": "static/chunks/styles.js",
-      "publicPath": "static/chunks/styles.js"
-    },
-    {
-      "id": 7,
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
@@ -375,20 +265,20 @@
     {
       "id": "../../node_modules/@apollo/react-ssr/lib/react-ssr.esm.js",
       "name": "../../node_modules/@apollo/react-ssr/lib/react-ssr.esm.js",
-      "file": "static/chunks/3.js",
-      "publicPath": "static/chunks/3.js"
+      "file": "static/chunks/2.js",
+      "publicPath": "static/chunks/2.js"
     },
     {
       "id": "../../node_modules/react-dom/cjs/react-dom-server.browser.development.js",
       "name": "../../node_modules/react-dom/cjs/react-dom-server.browser.development.js",
-      "file": "static/chunks/3.js",
-      "publicPath": "static/chunks/3.js"
+      "file": "static/chunks/2.js",
+      "publicPath": "static/chunks/2.js"
     },
     {
       "id": "../../node_modules/react-dom/server.browser.js",
       "name": "../../node_modules/react-dom/server.browser.js",
-      "file": "static/chunks/3.js",
-      "publicPath": "static/chunks/3.js"
+      "file": "static/chunks/2.js",
+      "publicPath": "static/chunks/2.js"
     }
   ]
 }

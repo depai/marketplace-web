@@ -6,7 +6,7 @@ module.exports =
 /******/ 	// object to store loaded chunks
 /******/ 	// "0" means "already loaded"
 /******/ 	var installedChunks = {
-/******/ 		"static\\development\\pages\\_app.js": 0
+/******/ 		"static/development/pages/_app.js": 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -127,9 +127,9 @@ module.exports =
 /******/ ({
 
 /***/ "../../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js":
-/*!******************************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/@babel/runtime-corejs2/core-js/object/define-property.js ***!
-  \******************************************************************************************************************/
+/*!**********************************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/@babel/runtime-corejs2/core-js/object/define-property.js ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -138,9 +138,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /***/ }),
 
 /***/ "../../node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js":
-/*!******************************************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js ***!
-  \******************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js ***!
+  \**********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -149,9 +149,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-prope
 /***/ }),
 
 /***/ "../../node_modules/@babel/runtime-corejs2/core-js/symbol.js":
-/*!**************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/@babel/runtime-corejs2/core-js/symbol.js ***!
-  \**************************************************************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/@babel/runtime-corejs2/core-js/symbol.js ***!
+  \******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -160,9 +160,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/symbol */ "core-js/l
 /***/ }),
 
 /***/ "../../node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js":
-/*!***********************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js ***!
-  \***********************************************************************************************************/
+/*!***************************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js ***!
+  \***************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -171,9 +171,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "
 /***/ }),
 
 /***/ "../../node_modules/@babel/runtime-corejs2/core-js/weak-map.js":
-/*!****************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/@babel/runtime-corejs2/core-js/weak-map.js ***!
-  \****************************************************************************************************/
+/*!********************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/@babel/runtime-corejs2/core-js/weak-map.js ***!
+  \********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -182,9 +182,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/weak-map */ "core-js
 /***/ }),
 
 /***/ "../../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js":
-/*!*****************************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js ***!
-  \*****************************************************************************************************************/
+/*!*********************************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -199,9 +199,9 @@ module.exports = _interopRequireDefault;
 /***/ }),
 
 /***/ "../../node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js":
-/*!******************************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js ***!
-  \******************************************************************************************************************/
+/*!**********************************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -270,9 +270,9 @@ module.exports = _interopRequireWildcard;
 /***/ }),
 
 /***/ "../../node_modules/@babel/runtime-corejs2/helpers/typeof.js":
-/*!**************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/@babel/runtime-corejs2/helpers/typeof.js ***!
-  \**************************************************************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/@babel/runtime-corejs2/helpers/typeof.js ***!
+  \******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -301,9 +301,9 @@ module.exports = _typeof;
 /***/ }),
 
 /***/ "../../node_modules/@redq/reuse-modal/lib/index.css":
-/*!*****************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/@redq/reuse-modal/lib/index.css ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/@redq/reuse-modal/lib/index.css ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -312,9 +312,9 @@ module.exports = _typeof;
 /***/ }),
 
 /***/ "../../node_modules/next/app.js":
-/*!*********************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/app.js ***!
-  \*********************************************************************/
+/*!*************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/app.js ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -324,9 +324,9 @@ module.exports = __webpack_require__(/*! ./dist/pages/_app */ "../../node_module
 /***/ }),
 
 /***/ "../../node_modules/next/dist/client/link.js":
-/*!**********************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/client/link.js ***!
-  \**********************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/client/link.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -635,9 +635,9 @@ exports.default = _default;
 /***/ }),
 
 /***/ "../../node_modules/next/dist/client/router.js":
-/*!************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/client/router.js ***!
-  \************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/client/router.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -797,9 +797,9 @@ function makePublicRouterInstance(router) {
 /***/ }),
 
 /***/ "../../node_modules/next/dist/client/with-router.js":
-/*!*****************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/client/with-router.js ***!
-  \*****************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/client/with-router.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -837,9 +837,9 @@ function withRouter(ComposedComponent) {
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/mitt.js":
-/*!*******************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/mitt.js ***!
-  \*******************************************************************************************/
+/*!***********************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/mitt.js ***!
+  \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -892,9 +892,9 @@ exports.default = mitt;
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/router-context.js":
-/*!*****************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/router-context.js ***!
-  \*****************************************************************************************************/
+/*!*********************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/router-context.js ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -920,9 +920,9 @@ exports.RouterContext = React.createContext(null);
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/router/router.js":
-/*!****************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/router/router.js ***!
-  \****************************************************************************************************/
+/*!********************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/router/router.js ***!
+  \********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1567,9 +1567,9 @@ Router.events = mitt_1.default();
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js":
-/*!**************************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js ***!
-  \**************************************************************************************************************/
+/*!******************************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/router/utils/is-dynamic.js ***!
+  \******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1591,9 +1591,9 @@ exports.isDynamicRoute = isDynamicRoute;
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/router/utils/route-matcher.js":
-/*!*****************************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/router/utils/route-matcher.js ***!
-  \*****************************************************************************************************************/
+/*!*********************************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/router/utils/route-matcher.js ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1635,9 +1635,9 @@ exports.getRouteMatcher = getRouteMatcher;
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/router/utils/route-regex.js":
-/*!***************************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/router/utils/route-regex.js ***!
-  \***************************************************************************************************************/
+/*!*******************************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/router/utils/route-regex.js ***!
+  \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1674,9 +1674,9 @@ exports.getRouteRegex = getRouteRegex;
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/utils.js":
-/*!********************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/utils.js ***!
-  \********************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/utils.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1809,9 +1809,9 @@ exports.ST = exports.SP && typeof performance.mark === 'function' && typeof perf
 /***/ }),
 
 /***/ "../../node_modules/next/dist/pages/_app.js":
-/*!*********************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/pages/_app.js ***!
-  \*********************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/pages/_app.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1942,9 +1942,9 @@ function createUrl(router) {
 /***/ }),
 
 /***/ "../../node_modules/next/link.js":
-/*!**********************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/link.js ***!
-  \**********************************************************************/
+/*!**************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/link.js ***!
+  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1954,9 +1954,9 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "../../node_modul
 /***/ }),
 
 /***/ "../../node_modules/next/node_modules/react-is/cjs/react-is.development.js":
-/*!****************************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/node_modules/react-is/cjs/react-is.development.js ***!
-  \****************************************************************************************************************/
+/*!********************************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/node_modules/react-is/cjs/react-is.development.js ***!
+  \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2193,9 +2193,9 @@ exports.isSuspense = isSuspense;
 /***/ }),
 
 /***/ "../../node_modules/next/node_modules/react-is/index.js":
-/*!*********************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/node_modules/react-is/index.js ***!
-  \*********************************************************************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/node_modules/react-is/index.js ***!
+  \*************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2210,9 +2210,9 @@ if (false) {} else {
 /***/ }),
 
 /***/ "../../node_modules/rc-collapse/assets/index.css":
-/*!**************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/rc-collapse/assets/index.css ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/rc-collapse/assets/index.css ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2221,9 +2221,9 @@ if (false) {} else {
 /***/ }),
 
 /***/ "../../node_modules/rc-table/assets/index.css":
-/*!***********************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/rc-table/assets/index.css ***!
-  \***********************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/rc-table/assets/index.css ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2232,9 +2232,9 @@ if (false) {} else {
 /***/ }),
 
 /***/ "../../node_modules/react-multi-carousel/lib/styles.css":
-/*!*********************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/react-multi-carousel/lib/styles.css ***!
-  \*********************************************************************************************/
+/*!*************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/react-multi-carousel/lib/styles.css ***!
+  \*************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2358,7 +2358,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FurnitureIcon", function() { return FurnitureIcon; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\components\\AllSvgIcon.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/components/AllSvgIcon.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -14339,7 +14339,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Button_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Button.style */ "./components/Button/Button.style.tsx");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-intl */ "react-intl");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_intl__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\components\\Button\\Button.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/components/Button/Button.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -14450,7 +14450,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-intl */ "react-intl");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_intl__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\components\\NavLink\\NavLink.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/components/NavLink/NavLink.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -14563,7 +14563,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Popover_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Popover.style */ "./components/Popover/Popover.style.tsx");
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\components\\Popover\\Popover.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/components/Popover/Popover.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -14664,7 +14664,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SearchBox_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SearchBox.style */ "./components/SearchBox/SearchBox.style.tsx");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-intl */ "react-intl");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_intl__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\components\\SearchBox\\Input.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/components/SearchBox/Input.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -14842,7 +14842,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SearchResults__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SearchResults */ "./components/SearchBox/SearchResults.tsx");
 /* harmony import */ var _SearchBox_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SearchBox.style */ "./components/SearchBox/SearchBox.style.tsx");
 /* harmony import */ var _AllSvgIcon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../AllSvgIcon */ "./components/AllSvgIcon.tsx");
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\components\\SearchBox\\SearchBox.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/components/SearchBox/SearchBox.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -15012,7 +15012,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _SearchBox_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SearchBox.style */ "./components/SearchBox/SearchBox.style.tsx");
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\components\\SearchBox\\SearchResults.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/components/SearchBox/SearchResults.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -15165,7 +15165,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Header_Header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Header/Header */ "./containers/LayoutContainer/Header/Header.tsx");
 /* harmony import */ var contexts_app_app_provider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! contexts/app/app.provider */ "./contexts/app/app.provider.ts");
 /* harmony import */ var constants_navigation__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! constants/navigation */ "./constants/navigation.ts");
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\containers\\LayoutContainer\\AppLayout.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/containers/LayoutContainer/AppLayout.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -15462,7 +15462,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var image_user_jpg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! image/user.jpg */ "./image/user.jpg");
 /* harmony import */ var image_user_jpg__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(image_user_jpg__WEBPACK_IMPORTED_MODULE_16__);
 /* harmony import */ var constants_navigation__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! constants/navigation */ "./constants/navigation.ts");
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\containers\\LayoutContainer\\Header\\Header.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/containers/LayoutContainer/Header/Header.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -16077,7 +16077,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-intl */ "react-intl");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_intl__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var contexts_auth_auth_context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! contexts/auth/auth.context */ "./contexts/auth/auth.context.tsx");
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\containers\\SignInOutForm\\ForgotPass.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/containers/SignInOutForm/ForgotPass.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -16218,7 +16218,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SignUp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SignUp */ "./containers/SignInOutForm/SignUp.tsx");
 /* harmony import */ var _ForgotPass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ForgotPass */ "./containers/SignInOutForm/ForgotPass.tsx");
 /* harmony import */ var contexts_auth_auth_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! contexts/auth/auth.context */ "./contexts/auth/auth.context.tsx");
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\containers\\SignInOutForm\\Form.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/containers/SignInOutForm/Form.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -16273,7 +16273,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_intl__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _redq_reuse_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @redq/reuse-modal */ "@redq/reuse-modal");
 /* harmony import */ var _redq_reuse_modal__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_redq_reuse_modal__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\containers\\SignInOutForm\\SignIn.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/containers/SignInOutForm/SignIn.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -16645,7 +16645,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var contexts_auth_auth_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! contexts/auth/auth.context */ "./contexts/auth/auth.context.tsx");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-intl */ "react-intl");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_intl__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\containers\\SignInOutForm\\SignUp.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/containers/SignInOutForm/SignUp.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -17000,7 +17000,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _auth_context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.context */ "./contexts/auth/auth.context.tsx");
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\contexts\\auth\\auth.provider.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/contexts/auth/auth.provider.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -17107,7 +17107,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var helper_localStorage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! helper/localStorage */ "./helper/localStorage.ts");
 /* harmony import */ var helper_utility__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! helper/utility */ "./helper/utility.ts");
 /* harmony import */ var _cart_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./cart.context */ "./contexts/cart/cart.context.tsx");
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\contexts\\cart\\cart.provider.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/contexts/cart/cart.provider.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -17368,7 +17368,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useCreateContext", function() { return useCreateContext; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\contexts\\create-context.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/contexts/create-context.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function useCreateContext(defaultValue, reducer) {
@@ -17468,7 +17468,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var stylis_plugin_rtl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! stylis-plugin-rtl */ "stylis-plugin-rtl");
 /* harmony import */ var stylis_plugin_rtl__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(stylis_plugin_rtl__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var styled_global_style__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled/global.style */ "./styled/global.style.tsx");
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\contexts\\language\\language.provider.js";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/contexts/language/language.provider.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -17610,7 +17610,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _search_context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./search.context */ "./contexts/search/search.context.tsx");
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\contexts\\search\\search.provider.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/contexts/search/search.provider.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -18082,7 +18082,7 @@ var data_translation_he_json__WEBPACK_IMPORTED_MODULE_16___namespace = /*#__PURE
 /* harmony import */ var _redq_reuse_modal_lib_index_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @redq/reuse-modal/lib/index.css */ "../../node_modules/@redq/reuse-modal/lib/index.css");
 /* harmony import */ var _redq_reuse_modal_lib_index_css__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_redq_reuse_modal_lib_index_css__WEBPACK_IMPORTED_MODULE_20__);
 /* harmony import */ var styled_global_style__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! styled/global.style */ "./styled/global.style.tsx");
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\pages\\_app.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/pages/_app.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }

@@ -94,9 +94,9 @@ module.exports =
 /******/ ({
 
 /***/ "../../node_modules/next/dist/next-server/lib/constants.js":
-/*!************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/constants.js ***!
-  \************************************************************************************************/
+/*!****************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/constants.js ***!
+  \****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -146,9 +146,9 @@ exports.PERMANENT_REDIRECT_STATUS = 308;
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/document-context.js":
-/*!*******************************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/document-context.js ***!
-  \*******************************************************************************************************/
+/*!***********************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/document-context.js ***!
+  \***********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -174,9 +174,9 @@ exports.DocumentContext = React.createContext(null);
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/lib/utils.js":
-/*!********************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/lib/utils.js ***!
-  \********************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/lib/utils.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -309,9 +309,9 @@ exports.ST = exports.SP && typeof performance.mark === 'function' && typeof perf
 /***/ }),
 
 /***/ "../../node_modules/next/dist/next-server/server/utils.js":
-/*!***********************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/next-server/server/utils.js ***!
-  \***********************************************************************************************/
+/*!***************************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/next-server/server/utils.js ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -339,9 +339,9 @@ exports.cleanAmpPath = cleanAmpPath;
 /***/ }),
 
 /***/ "../../node_modules/next/dist/pages/_document.js":
-/*!**************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/pages/_document.js ***!
-  \**************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/pages/_document.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1028,9 +1028,9 @@ function getPageFile(page, buildId) {
 /***/ }),
 
 /***/ "../../node_modules/next/dist/server/htmlescape.js":
-/*!****************************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/dist/server/htmlescape.js ***!
-  \****************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/dist/server/htmlescape.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1042,9 +1042,9 @@ const ESCAPE_LOOKUP={'&':'\\u0026','>':'\\u003e','<':'\\u003c','\u2028':'\\u2028
 /***/ }),
 
 /***/ "../../node_modules/next/document.js":
-/*!**************************************************************************!*\
-  !*** E:/pickbazar-master/pickbazar-master/node_modules/next/document.js ***!
-  \**************************************************************************/
+/*!******************************************************************************************************!*\
+  !*** /Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/node_modules/next/document.js ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1069,7 +1069,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "E:\\pickbazar-master\\pickbazar-master\\packages\\shop\\pages\\_document.tsx";
+var _jsxFileName = "/Users/tunguyen/WebstormProjects/Archive/example-marketplace-web/packages/shop/pages/_document.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
