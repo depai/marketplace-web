@@ -120,3 +120,4 @@ fabric.properties
 #Sonar files
 .scannerwork/*
 
+.next
