@@ -65,11 +65,32 @@ export const DiscountPercent = styled.span`
 
 export const ProductInfo = styled.div`
   padding: 20px 25px 30px;
+  
+  .product-cart {
+      
+  }
 
   @media (max-width: 767px) {
     padding: 15px 20px;
     min-height: 123px;
   }
+  
+  .product-price-demo {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    .product-discount {
+      color: rgba(45, 51, 63, 0.5);
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  }
+
+  .discountedPriceDemo {
+      font-size: 14px;
+      text-decoration-line: line-through;
+      color: rgba(45, 51, 63, 0.5);
+  }  
 
   .product-title {
     font-family: 'Lato', sans-serif;
@@ -98,6 +119,37 @@ export const ProductInfo = styled.div`
       font-size: 12px;
     }
   }
+  
+  .cart-button {
+      margin: 10px auto;
+      border: 2px solid #f7f7f7;
+      border-radius: 18px;
+      height: 36px;
+      padding-left: 17px;
+      padding-right: 17px;
+      font-size: ${themeGet('fontSizes.1', '13')}px;
+      font-weight: ${themeGet('fontWeights.6', '700')};
+      @media (max-width: 767px) {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border-radius: 50%;
+      }
+      .btn-text {
+        padding: 0 0 0 6px;
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+      &:hover {
+        color: #fff;
+        background-color: #009e7f;
+        border-color: #009e7f;
+      }
+      svg {
+        fill: currentColor;
+      }
+    }
 
   .product-meta {
     margin-top: 30px;
