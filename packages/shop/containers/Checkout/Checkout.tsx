@@ -43,6 +43,7 @@ import {
 import CouponBox, { CouponDisplay } from 'components/CouponBox/CouponBox';
 import { ProfileContext } from 'contexts/profile/profile.context';
 import { FormattedMessage } from 'react-intl';
+import { CURRENCY } from 'helper/constant';
 
 // The type of props Checkout Form receives
 interface MyFormProps {
@@ -193,7 +194,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
                 {items.length}{' '}
                 <FormattedMessage id='itemsText' defaultMessage='items' />)
               </OrderLabel>
-              <OrderAmount>${subTotalPrice || 0}</OrderAmount>
+              <OrderAmount>{subTotalPrice || 0}{CURRENCY}</OrderAmount>
             </OrderSummaryItem>
 
             <OrderSummaryItem style={{ marginBottom: 30 }}>
@@ -203,7 +204,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
                   defaultMessage='Shipping Fee'
                 />
               </OrderLabel>
-              <OrderAmount>$0</OrderAmount>
+              <OrderAmount>0{CURRENCY}</OrderAmount>
             </OrderSummaryItem>
 
             <OrderSummaryItem
@@ -218,7 +219,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
                 <CouponDisplay
                   code={processedCoupon.code}
                   sign='-'
-                  currency='$'
+                  currency={CURRENCY}
                   price={discount}
                   onClick={e => {
                     e.preventDefault();
@@ -228,6 +229,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
               ) : (
                 <>
                   <CouponBoxWrapper>
+                    {/*xac thuc ma giam gia*/}
                     <CouponBox
                       buttonTitle='Apply'
                       intlCouponBoxPlaceholder='couponPlaceholder'
@@ -254,7 +256,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
               <OrderLabel>
                 <FormattedMessage id='totalText' defaultMessage='Total' />
               </OrderLabel>
-              <OrderAmount>${totalPrice}</OrderAmount>
+              <OrderAmount>{totalPrice}{CURRENCY}</OrderAmount>
             </OrderSummaryItem>
           </OrderSummary>
           {/* DeliverySchedule */}

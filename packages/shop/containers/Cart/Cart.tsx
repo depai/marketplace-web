@@ -82,8 +82,8 @@ const CartItem: React.FC<CartItemProps> = ({ product, update }) => {
       <ItemDetails>
         <ItemTitle>{product.title}</ItemTitle>
         <ItemPrice>
-          {CURRENCY}
           {product.salePrice ? product.salePrice : product.price}
+          {CURRENCY}
         </ItemPrice>
         <ItemWeight>
           {product.quantity ? product.quantity : 1} x{' '}
@@ -91,8 +91,8 @@ const CartItem: React.FC<CartItemProps> = ({ product, update }) => {
         </ItemWeight>
       </ItemDetails>
       <TotalPrice>
-        {CURRENCY}
         {itemPrice}
+        {CURRENCY}
       </TotalPrice>
 
       <DeleteButton onClick={() => update(product.id, 0)}>
@@ -229,8 +229,8 @@ const Cart: React.FC<CartPropsType> = ({
                   />
                 </Title>
                 <PriceBox>
+                  {totalPrice}
                   {CURRENCY}
-                  {parseFloat(`${totalPrice}`).toFixed(2)}
                 </PriceBox>
               </>
             </CheckoutButton>
@@ -245,8 +245,7 @@ const Cart: React.FC<CartPropsType> = ({
                 />
               </Title>
               <PriceBox>
-                {CURRENCY}
-                {parseFloat(`${totalPrice}`).toFixed(2)}
+                {totalPrice}{CURRENCY}
               </PriceBox>
             </>
           </CheckoutButton>
