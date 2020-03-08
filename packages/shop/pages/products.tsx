@@ -6,11 +6,12 @@ import BannerImg from "../image/Cloths.png";
 import Banner from "../containers/Banner/Banner";
 import {ContentSection, MainContentArea, SidebarSection} from "../styled/pages.style";
 import Sidebar from "../containers/Sidebar/Sidebar";
-import Products from "../containers/Products/Products";
+import Products from "../containers/ProductsTelio/Products";
+import {withApolloTelio} from "../helper/apolloTelio";
 
 const PAGE_TYPE = 'grocery';
 
-const categories = ({ deviceType }) => {
+const products = ({ deviceType }) => {
     const targetRef = React.useRef(null);
     return (
         <>
@@ -18,6 +19,11 @@ const categories = ({ deviceType }) => {
                 <title>Categories - PickBazar</title>
             </Head>
             <Modal>
+                <Banner
+                    intlTitleId='groceriesTitle'
+                    intlDescriptionId='groceriesSubTitle'
+                    imageUrl={BannerImg}
+                />
                 <MainContentArea>
                     <ContentSection>
                         <div ref={targetRef}>
@@ -34,4 +40,4 @@ const categories = ({ deviceType }) => {
     );
 }
 
-export default withApollo(categories)
+export default withApolloTelio(products)
