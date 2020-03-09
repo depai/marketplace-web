@@ -71,7 +71,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       update(data.id, value);
     }
   };
-
+  console.log(discountInPercent, image)
   return (
       <ProductCardWrapper onClick={onClick} className='product-card'>
         <ProductImageWrapper>

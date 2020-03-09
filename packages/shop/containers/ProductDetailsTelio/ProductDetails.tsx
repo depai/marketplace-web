@@ -52,7 +52,7 @@ const ProductDetails: React.FunctionComponent<ProdutDetailsProps> = ({
   const data = product;
   const index = findProductIndex(products, data.id);
   const quantity = getProductQuantity(products, index);
-
+  
   const handleClick = e => {
     e.stopPropagation();
     add(e, data);
