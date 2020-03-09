@@ -17,7 +17,7 @@ import StoreNav from "../components/StoreNav/StoreNav";
 import storeType from "../constants/storeType";
 import Carousel from "../components/Carousel/Carousel";
 import OFFERS from "../data/offers";
-import CartPopUp from "../containers/CartTelio/CartPopUp";
+import CartPopUpDemo from 'containers/Cart/CardPopUpDemo';
 
 const products = ({ deviceType }) => {
     const targetRef = React.useRef(null);
@@ -45,7 +45,7 @@ const products = ({ deviceType }) => {
                         </div>
                     </ContentSection>
                 </MainContentArea>
-                <CartPopUp deviceType={deviceType} />
+                <CartPopUpDemo deviceType={deviceType} />
             </Modal>
         </>
     );

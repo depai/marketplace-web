@@ -62,11 +62,11 @@ const APPLY_COUPON = gql`
 const CartItem: React.FC<CartItemProps> = ({ product, update }) => {
   const itemPrice = calculateItemPrice(product);
   return (
-    <ItemCards key={product.id}>
+    <ItemCards key={product._id}>
       <InputNumber
         type='vertical'
         value={product.quantity}
-        onUpdate={(value: number) => update(product.id, value)}
+        onUpdate={(value: number) => update(product._id, value)}
         style={{ marginRight: 15 }}
       />
 
@@ -95,7 +95,7 @@ const CartItem: React.FC<CartItemProps> = ({ product, update }) => {
         {CURRENCY}
       </TotalPrice>
 
-      <DeleteButton onClick={() => update(product.id, 0)}>
+      <DeleteButton onClick={() => update(product._id, 0)}>
         <CloseIcon />
       </DeleteButton>
     </ItemCards>
@@ -163,7 +163,7 @@ const Cart: React.FC<CartPropsType> = ({
           {products && products.length ? (
             products.map(item => (
               <CartItem
-                key={`cartItem-${item.id}`}
+                key={`cartItem-${item._id}`}
                 update={update}
                 product={item}
               />
