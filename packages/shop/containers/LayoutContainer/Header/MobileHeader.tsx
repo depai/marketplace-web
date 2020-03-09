@@ -42,6 +42,7 @@ import {
   USFlag,
   ILFlag,
   ESFlag,
+  VIFlag,
   SAFlag,
 } from 'components/AllSvgIcon';
 
@@ -63,6 +64,7 @@ const LanguageArray = [
   { id: 'de', label: 'German', intlLangName: 'intlGerman', icon: <DEFlag /> },
   { id: 'he', label: 'Hebrew', intlLangName: 'intlHebrew', icon: <ILFlag /> },
   { id: 'es', label: 'Spanish', intlLangName: 'intlSpanish', icon: <ESFlag /> },
+  { id: 'vi', label: 'Vietnam', intlLangName: 'intlVietnam', icon: <VIFlag /> },
 ];
 
 const SearchModal: React.FC<SearchModalProps> = ({

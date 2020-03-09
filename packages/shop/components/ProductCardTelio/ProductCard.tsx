@@ -56,7 +56,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                                                    ...props
                                                  }) => {
   const { add, update, products } = React.useContext(CartContext);
-  const index = data && data.id ? findProductIndex(products, data.id) : -1;
+  const index = data && data._id ? findProductIndex(products, data._id) : -1;
   const quantity = getProductQuantity(products, index);
 
   const handleClick = (e: any) => {
@@ -68,7 +68,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     if (index === -1 && value === 1) {
       add(e, data);
     } else {
-      update(data.id, value);
+      update(data._id, value);
     }
   };
   return (
@@ -80,34 +80,31 @@ const ProductCard: React.FC<ProductCardProps> = ({
               style={{ position: 'relative' }}
               alt={title}
           />
-          {discountInPercent ? (
-              <>
-                <DiscountPercent>{discountInPercent.toPrecision(2)}%</DiscountPercent>
-              </>
-          ) : (
-              ''
-          )}
         </ProductImageWrapper>
         <ProductInfo>
           <h3 className='product-title'>{title}</h3>
           <span className='product-weight'>Còn {quantityWarehouse} sản phẩm</span>
           <div className='product-meta'>
             <div className='productPriceWrapper'>
+              <span className='product-price-demo'>
+                  {salePrice ? salePrice.toLocaleString('vi-VN', { style: 'currency', currency: 'vnd' }) : price.toLocaleString('vi-VN', { style: 'currency', currency: 'vnd' })}
+                  {' '}{currency}
+                  {discountInPercent ? (
+                      <span className={'product-discount'}> -{discountInPercent.toPrecision(2)}%</span>
+                  ) : (
+                      ''
+                  )}
+              </span>
               {discountInPercent ? (
-                  <span className='discountedPrice'>
+                  <span className='discountedPriceDemo'>
                 {price.toLocaleString('vi-VN', { style: 'currency', currency: 'vnd' })}
               </span>
               ) : (
                   ''
               )}
-
-              <span className='product-price'>
-              {salePrice ? salePrice.toLocaleString('vi-VN', { style: 'currency', currency: 'vnd' }) : price.toLocaleString('vi-VN', { style: 'currency', currency: 'vnd' })}
-                {currency}
-            </span>
             </div>
-
-            {quantity <= 0 || quantityWarehouse < quantity? (
+          </div>
+            {quantity <= 0 || quantityWarehouse < quantity ? (
                 <Button
                     title='Cart'
                     intlButtonId='addCartButton'
@@ -123,12 +120,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 <InputIncDec
                     value={quantity}
                     onClick={(e: any) => {
-                      e.stopPropagation(onclick);
+                        e.stopPropagation(onclick);
                     }}
                     onUpdate={(value: number, e: any) => handleUpdate(value, e)}
                 />
             )}
-          </div>
         </ProductInfo>
       </ProductCardWrapper>
   );

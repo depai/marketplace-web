@@ -92,11 +92,11 @@ export const getSubTotalPrice = () => {
 
 export const findProductIndex = (
   cartProducts: CartProduct[],
-  dataId: number
+  dataId: string
 ): number => {
   let index = -1;
   if (cartProducts && cartProducts.length) {
-    index = cartProducts.findIndex(product => product.id === dataId);
+    index = cartProducts.findIndex(product => product._id === dataId);
   }
   return index;
 };

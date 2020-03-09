@@ -194,7 +194,6 @@ const resolvers = {
         .limit(args.limit);
       const util = require('util');
 
-      // console.log(util.inspect(categories, {showHidden: false, depth: null}))
       const count = await Category.count({});
       return { docs: categories, count: count };
     },

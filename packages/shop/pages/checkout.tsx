@@ -3,7 +3,7 @@ import Head from "next/head";
 import { NextPage } from "next";
 import { useQuery } from "@apollo/react-hooks";
 import { Modal } from "@redq/reuse-modal";
-import { withApollo } from "helper/apollo";
+import { withApolloTelio } from "helper/apolloTelio";
 import Checkout from "containers/Checkout/Checkout";
 import { GET_LOGGED_IN_CUSTOMER } from "graphql/query/customer.query";
 
@@ -18,6 +18,7 @@ type Props = {
 };
 const CheckoutPage: NextPage<Props> = ({ deviceType }) => {
 const { data, error, loading } = useQuery(GET_LOGGED_IN_CUSTOMER);
+console.log(data, error, loading)
   if (loading) {
     return <div>loading...</div>;
   }
@@ -38,4 +39,4 @@ const { data, error, loading } = useQuery(GET_LOGGED_IN_CUSTOMER);
   );
 };
 
-export default withApollo(CheckoutPage);
+export default withApolloTelio(CheckoutPage);
