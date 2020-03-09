@@ -71,7 +71,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
       update(data._id, value);
     }
   };
-
   return (
       <ProductCardWrapper onClick={onClick} className='product-card'>
         <ProductImageWrapper>
@@ -105,7 +104,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               )}
             </div>
           </div>
-            {quantity <= 0 || quantityWarehouse < quantity ? (
+            {quantity <= 0 ? (
                 <Button
                     title='Cart'
                     intlButtonId='addCartButton'

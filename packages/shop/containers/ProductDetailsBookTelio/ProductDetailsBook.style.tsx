@@ -25,7 +25,6 @@ export const ProductPreview = styled.div`
   img {
     display: block;
     max-width: 100%;
-    max-height: 450px;
     height: auto;
   }
 
@@ -36,7 +35,6 @@ export const ProductPreview = styled.div`
     flex: 0 0 100%;
     max-width: 100%;
     padding: 30px 25px 60px;
-    order: 0;
   }
 `;
 
@@ -78,7 +76,6 @@ export const ProductInfo = styled.div`
     max-width: 100%;
     padding: 30px 25px;
     border: 0;
-    order: 1;
   }
 `;
 
@@ -135,43 +132,75 @@ export const DiscountPercent = styled.span`
   }
 `;
 
-export const ProductTitle = styled.h1`
+export const BookTitle = styled.h1`
   font-family: 'Poppins', sans-serif;
   font-size: ${themeGet('fontSizes.4', '21')}px;
   font-weight: ${themeGet('fontWeights.6', '700')};
   color: ${themeGet('colors.darkBold', '#0D1136')};
   line-height: 1.2;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 `;
 
-export const ProductWeight = styled.div`
+export const AuthorName = styled.div`
   font-family: 'Lato', sans-serif;
-  font-size: ${themeGet('fontSizes.1', '13')}px;
-  font-weight: ${themeGet('fontWeights.3', '400')};
-  color: ${themeGet('colors.darkRegular', '#77798C')};
-`;
+  font-size: ${themeGet('fontSizes.2', '15')}px;
+  font-weight: ${themeGet('fontWeights.6', '700')};
+  color: ${themeGet('colors.darkBold', '#0D1136')};
+  display: flex;
+  align-items: center;
 
-export const ProductBrand = styled.div`
-  font-family: 'Lato', sans-serif;
-  font-size: ${themeGet('fontSizes.1', '13')}px;
-  margin-top: 10px;
-  span {
-    margin-right: 40px;
-    font-weight: 900;
-    &.brand {
-        color: #2597C4;
-    }
+  svg {
+    margin-right: 10px;
   }
 `;
 
-export const ProductDescription = styled.p`
+export const BookDescriptionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const BookDescription = styled.p`
   font-family: 'Lato', sans-serif;
   font-size: ${themeGet('fontSizes.2', '15')}px;
   font-weight: ${themeGet('fontWeights.3', '400')};
   color: ${themeGet('colors.darkMedium', '#424561')};
   line-height: 2;
   margin-top: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const BookMetaTable = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+`;
+
+export const BookMetaTableRow = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
+
+export const BookMetaItem = styled.span`
+  font-family: 'Lato', sans-serif;
+  font-size: ${themeGet('fontSizes.2', '15')}px;
+  font-weight: ${themeGet('fontWeights.3', '400')};
+  color: ${themeGet('colors.darkMedium', '#424561')};
+
+  &:first-child {
+    width: 200px;
+    flex-shrink: 0;
+  }
+
+  &:last-child {
+    width: 100%;
+  }
 `;
 
 export const ProductCartWrapper = styled.div`
@@ -180,32 +209,15 @@ export const ProductCartWrapper = styled.div`
 `;
 
 export const ProductPriceWrapper = styled.div`
-  margin-top: 50px;
+  display: flex;
   align-items: center;
-  color: #EB522F;
-  .product-price {
-    color: red;
-    font-size: 26px;
-    .product-discount {
-      color: rgba(45, 51, 63, 0.5);
-      font-size: 14px;
-      margin-left: 10px;
-    }
-  }
-  .discountedPrice {
-      font-size: 16px;
-      text-decoration-line: line-through;
-      color: rgba(45, 51, 63, 0.5);
-  } 
 `;
-
 
 export const ProductPrice = styled.div`
   font-family: 'Lato', sans-serif;
   font-size: ${themeGet('fontSizes.3', '19')}px;
   font-weight: ${themeGet('fontWeights.6', '700')};
-  color: #EB522F;
-  margin-top: 50px;
+  color: ${themeGet('colors.primary', '#009E7F')};
 `;
 
 export const SalePrice = styled.span`
@@ -234,6 +246,9 @@ export const SalePrice = styled.span`
 
 export const ProductCartBtn = styled.div`
   margin-top: 30px;
+  display: flex;
+  align-items: center;
+
   .reusecore__button {
     border-radius: 20px;
     padding-left: 20px;
@@ -247,6 +262,24 @@ export const ProductCartBtn = styled.div`
         height: auto;
         @media (max-width: 990px) {
           width: 14px;
+        }
+      }
+    }
+
+    &.outline-button {
+      margin-left: 20px;
+
+      .btn-icon {
+        svg {
+          width: 16px;
+        }
+      }
+
+      &:hover {
+        color: ${themeGet('colors.primary', '#009E7F')};
+
+        svg {
+          color: ${themeGet('colors.primary', '#009E7F')};
         }
       }
     }
@@ -264,7 +297,6 @@ export const ProductMeta = styled.div`
 export const MetaSingle = styled.div`
   display: flex;
   flex-wrap: wrap;
-  /* align-items: center; */
 `;
 
 export const MetaItem = styled.span`
@@ -281,6 +313,87 @@ export const MetaItem = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const DetailsWrapper = styled.div`
+  background-color: ${themeGet('colors.lightColor', '#f7f7f7')};
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 70px 0px;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+
+  ${AuthorName} {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 990px) {
+    padding: 60px 30px 0px;
+  }
+`;
+
+export const DetailsTitle = styled.h3`
+  font-family: 'Poppins', sans-serif;
+  font-size: ${themeGet('fontSizes.4', '21')}px;
+  font-weight: ${themeGet('fontWeights.6', '700')};
+  color: ${themeGet('colors.darkBold', '#0D1136')};
+  line-height: 1.2;
+  margin-bottom: 20px;
+`;
+
+export const Description = styled.p`
+  font-family: 'Lato', sans-serif;
+  font-size: ${themeGet('fontSizes.2', '15')}px;
+  font-weight: ${themeGet('fontWeights.3', '400')};
+  color: ${themeGet('colors.darkMedium', '#424561')};
+  line-height: 2;
+`;
+
+export const Avatar = styled.div`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-right: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+export const SocialNetworks = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+export const SocialIcon = styled.span`
+  width: auto;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+
+  a {
+    height: 100%;
+  }
+
+  svg {
+    width: auto;
+    height: 100%;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 `;
 
 export const RelatedItems = styled.div`

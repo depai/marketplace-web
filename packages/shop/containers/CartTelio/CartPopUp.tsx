@@ -43,7 +43,6 @@ const CartPopUp: React.FC<CartProps> = ({
                                               deviceType: { mobile, tablet, desktop },
                                             }) => {
   const { cartState, dispatch, products, totalPrice } = useContext(CartContext);
-
   const handleModal = () => {
     openModal({
       show: true,

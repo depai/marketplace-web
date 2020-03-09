@@ -4,12 +4,12 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/react-hooks';
 import ProductDetails from 'containers/ProductDetailsTelio/ProductDetails';
-import ProductDetailsBook from 'containers/ProductDetailsBook/ProductDetailsBook';
+import ProductDetailsBook from 'containers/ProductDetailsBookTelio/ProductDetailsBook';
 import { Modal } from '@redq/reuse-modal';
 import ProductSingleWrapper, {
   ProductSingleContainer,
 } from 'styled/product-single.style';
-import CartPopUp from 'containers/Cart/CartPopUp';
+import CartPopUp from 'containers/CartTelio/CartPopUp';
 import { GET_PRODUCT_TELIO_DETAILS } from 'graphql/query/product.query';
 import {withApolloTelio} from "../../helper/apolloTelio";
 
@@ -29,8 +29,6 @@ const ProductPage: NextPage<Props> = ({ deviceType }) => {
     variables: { product_id:slug },
   });
 
-  console.log(data);
-
   if (loading) {
     return <div>loading...</div>;
   }
@@ -39,7 +37,7 @@ const ProductPage: NextPage<Props> = ({ deviceType }) => {
 
   let content;
   content = (
-      <ProductDetails product={data} deviceType={deviceType} />
+      <ProductDetails product={data.getDetailProduct} deviceType={deviceType} />
   );
 
   return (

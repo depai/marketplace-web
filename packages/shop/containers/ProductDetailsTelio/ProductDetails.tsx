@@ -10,6 +10,7 @@ import {
   ProductTitle,
   BackButton,
   ProductWeight,
+  ProductBrand,
   ProductDescription,
   ProductMeta,
   ProductCartWrapper,
@@ -24,13 +25,14 @@ import {
 import { LongArrowLeft, CartIcon } from 'components/AllSvgIcon';
 import ReadMore from 'components/Truncate/Truncate';
 import CarouselWithCustomDots from 'components/MultiCarousel/MultiCarousel';
-import Products from 'containers/Products/Products';
+import Products from 'containers/ProductsTelio/Products';
 import { CartContext } from 'contexts/cart/cart.context';
 import { CURRENCY } from 'helper/constant';
 import { findProductIndex, getProductQuantity } from 'helper/utility';
 import { Product } from 'interfaces';
 import { FormattedMessage } from 'react-intl';
 import LanguageContext from 'contexts/language/language.context';
+import { useQuery } from '@apollo/react-hooks';
 
 type ProdutDetailsProps = {
   product: Product | any;
@@ -50,9 +52,8 @@ const ProductDetails: React.FunctionComponent<ProdutDetailsProps> = ({
   }: any = useContext(LanguageContext);
   const { add, update, products } = useContext(CartContext);
   const data = product;
-  const index = findProductIndex(products, data.id);
+  const index = findProductIndex(products, data._id);
   const quantity = getProductQuantity(products, index);
-
   const handleClick = e => {
     e.stopPropagation();
     add(e, data);
@@ -62,7 +63,7 @@ const ProductDetails: React.FunctionComponent<ProdutDetailsProps> = ({
     if (index === -1 && value === 1) {
       add(e, data);
     } else {
-      update(data.id, value);
+      update(data._id, value);
     }
   };
 
@@ -72,6 +73,25 @@ const ProductDetails: React.FunctionComponent<ProdutDetailsProps> = ({
     }, 500);
   }, []);
 
+  const gallery = [
+    {
+      "url": product.image
+    },
+    {
+      "url": product.image
+    },
+    {
+      "url": product.image
+    },
+    {
+      "url": product.image
+    }
+  ]
+
+  const discountInPercent = product.specialPrice? (1-(product.specialPrice.spPrice / product.price ))*100 : 0;
+  const salePrice = product.specialPrice.spPrice;
+  const price = product.price;
+
   return (
     <>
       <ProductDetailsWrapper className='product-card' dir='ltr'>
@@ -79,51 +99,39 @@ const ProductDetails: React.FunctionComponent<ProdutDetailsProps> = ({
           ''
         ) : (
           <ProductPreview>
-            <BackButton>
-              <Button
-                title='Back'
-                intlButtonId='backBtn'
-                iconPosition='left'
-                size='small'
-                style={{
-                  backgroundColor: '#ffffff',
-                  border: '1px solid #f1f1f1',
-                  color: '#77798c',
-                }}
-                icon={<LongArrowLeft />}
-                onClick={Router.back}
-              />
-            </BackButton>
-
             <CarouselWithCustomDots
-              items={product.gallery}
+              items={gallery}
               deviceType={deviceType}
             />
           </ProductPreview>
         )}
 
         <ProductInfo dir={lang === 'ar' || lang === 'he' ? 'rtl' : 'ltr'}>
-          <ProductTitle>{product.title}</ProductTitle>
-          <ProductWeight>{product.unit}</ProductWeight>
-          <ProductDescription>
-            <ReadMore character={600}>{product.description}</ReadMore>
-          </ProductDescription>
-
+          <ProductTitle>{product.name}</ProductTitle>
+          <ProductWeight>{product.description}</ProductWeight>
+          <ProductBrand>
+            Thương hiệu: <span className={'brand'}> {product.brand}</span>
+            SKU: <span> {product.SKU}</span>
+            Xuất xứ: <span> {product.city}</span>
+          </ProductBrand>
           <ProductCartWrapper>
             <ProductPriceWrapper>
-              {product.discountInPercent ? (
-                <SalePrice>
-                  {CURRENCY}
-                  {product.price}
-                </SalePrice>
+              <p className='product-price'>
+                  {salePrice ? salePrice.toLocaleString('vi-VN', { style: 'currency', currency: 'vnd' }) : price.toLocaleString('vi-VN', { style: 'currency', currency: 'vnd' })}
+                {' '}{CURRENCY}
+                {discountInPercent ? (
+                    <span className={'product-discount'}> -{discountInPercent.toPrecision(2)}%</span>
+                ) : (
+                    ''
+                )}
+              </p>
+              {discountInPercent ? (
+                  <p className='discountedPrice'>
+                {price.toLocaleString('vi-VN', { style: 'currency', currency: 'vnd' })}
+              </p>
               ) : (
-                ''
+                  ''
               )}
-
-              <ProductPrice>
-                {CURRENCY}
-                {product.salePrice ? product.salePrice : product.price}
-              </ProductPrice>
             </ProductPriceWrapper>
 
             <ProductCartBtn>
@@ -197,7 +205,7 @@ const ProductDetails: React.FunctionComponent<ProdutDetailsProps> = ({
         )}
       </ProductDetailsWrapper>
 
-      <RelatedItems>
+      {/* <RelatedItems>
         <h2>
           <FormattedMessage
             id='intlReletedItems'
@@ -210,7 +218,7 @@ const ProductDetails: React.FunctionComponent<ProdutDetailsProps> = ({
           loadMore={false}
           fetchLimit={10}
         />
-      </RelatedItems>
+      </RelatedItems> */}
     </>
   );
 };

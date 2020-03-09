@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/react-hooks';
 import ProductDetails from 'containers/ProductDetails/ProductDetails';
-import ProductDetailsBook from 'containers/ProductDetailsBook/ProductDetailsBook';
+import ProductDetailsBook from 'containers/ProductDetailsBookTelio/ProductDetailsBook';
 import { Modal } from '@redq/reuse-modal';
 import ProductSingleWrapper, {
   ProductSingleContainer,

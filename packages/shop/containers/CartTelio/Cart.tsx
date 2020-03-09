@@ -82,7 +82,7 @@ const CartItem: React.FC<CartItemProps> = ({ product, update }) => {
       <ItemDetails>
         <ItemTitle>{product.title}</ItemTitle>
         <ItemPrice>
-          {product.salePrice ? product.salePrice : product.price}
+          {product.specialPrice.spPrice ? product.specialPrice.spPrice : product.price}
           {CURRENCY}
         </ItemPrice>
         <ItemWeight>
