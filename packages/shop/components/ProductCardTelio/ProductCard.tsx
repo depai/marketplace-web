@@ -105,7 +105,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               )}
             </div>
           </div>
-            {quantity <= 0 || quantityWarehouse < quantity ? (
+            {quantity <= 0 ? (
                 <Button
                     title='Cart'
                     intlButtonId='addCartButton'

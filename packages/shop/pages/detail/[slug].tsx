@@ -29,8 +29,6 @@ const ProductPage: NextPage<Props> = ({ deviceType }) => {
     variables: { product_id:slug },
   });
 
-  console.log(data);
-
   if (loading) {
     return <div>loading...</div>;
   }
@@ -39,7 +37,7 @@ const ProductPage: NextPage<Props> = ({ deviceType }) => {
 
   let content;
   content = (
-      <ProductDetails product={data} deviceType={deviceType} />
+      <ProductDetails product={data.getDetailProduct} deviceType={deviceType} />
   );
 
   return (

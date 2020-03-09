@@ -25,6 +25,9 @@ const typeDefs = gql`
     icon: String
     children: [Category]
   }
+  type Gallery {
+    url: String
+  }
   type Product {
     _id: String
     name: String
@@ -35,6 +38,7 @@ const typeDefs = gql`
     image: String
     brand: String
     status: String
+    type: String
     variants: [String]
     quantity: Int
     categories: [Category]
@@ -80,7 +84,7 @@ const typeDefs = gql`
       limit: Int
     ): PaginatedProduct
     getCategories(category: String, offset: Int, limit: Int): PaginatedCategory
-    getDetailProduct(slug: String): Product
+    getDetailProduct(product_id: String): Product
     getDetailCategory(category: String): Category
   }
   type Mutation {
@@ -109,6 +113,7 @@ const productSchema = new Schema(
     status: { type: String },
     variants: [{ type: String }],
     categories: [{ type: String }],
+    type: { type: String },
     price: { type: Number },
     quantity: { type: Number },
     brand: { type: String },

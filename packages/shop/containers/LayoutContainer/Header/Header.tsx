@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
 import { openModal } from '@redq/reuse-modal';
@@ -11,6 +11,8 @@ import AuthenticationForm from '../../SignInOutForm/Form';
 import { FormattedMessage } from 'react-intl';
 import Button from 'components/Button/Button';
 import LanguageContext from 'contexts/language/language.context';
+import { useQuery } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
 
 import {
   FruitsVegetable,
@@ -132,6 +134,24 @@ const LanguageArray = [
   { id: 'vi', label: 'Vietnam', intlLangName: 'intlVietnam', icon: <VIFlag /> },
 ];
 
+const GET_CATEGORIES = gql`
+  query getCategories($category: String) {
+    getCategories(category: $category) {
+      docs {
+        id
+        title
+        slug
+        icon
+        children {
+          id
+          title
+          slug
+        }
+      }
+    }
+  }
+`;
+
 const Header: React.FC<HeaderProps> = ({
   style,
   className,
@@ -241,6 +261,7 @@ const Header: React.FC<HeaderProps> = ({
       },
     });
   };
+  const [categories, setCategories] = useState([]);
 
   const isHomePage =
     pathname === HOME_PAGE ||
@@ -250,6 +271,13 @@ const Header: React.FC<HeaderProps> = ({
     pathname === BOOK_PAGE ||
     pathname === FURNITURE_PAGE ||
     pathname === BAGS_PAGE;
+
+  const { data, loading } = useQuery(GET_CATEGORIES, {});
+  useEffect(() => {
+    if (data.getCategories) {
+      setCategories(data.getCategories.docs)
+    }
+  }, []);
 
   return (
     <HeaderWrapper style={style} className={className}>

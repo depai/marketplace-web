@@ -151,6 +151,19 @@ export const ProductWeight = styled.div`
   color: ${themeGet('colors.darkRegular', '#77798C')};
 `;
 
+export const ProductBrand = styled.div`
+  font-family: 'Lato', sans-serif;
+  font-size: ${themeGet('fontSizes.1', '13')}px;
+  margin-top: 10px;
+  span {
+    margin-right: 40px;
+    font-weight: 900;
+    &.brand {
+        color: #2597C4;
+    }
+  }
+`;
+
 export const ProductDescription = styled.p`
   font-family: 'Lato', sans-serif;
   font-size: ${themeGet('fontSizes.2', '15')}px;
@@ -167,15 +180,32 @@ export const ProductCartWrapper = styled.div`
 `;
 
 export const ProductPriceWrapper = styled.div`
-  display: flex;
+  margin-top: 50px;
   align-items: center;
+  color: #EB522F;
+  .product-price {
+    color: red;
+    font-size: 26px;
+    .product-discount {
+      color: rgba(45, 51, 63, 0.5);
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  }
+  .discountedPrice {
+      font-size: 16px;
+      text-decoration-line: line-through;
+      color: rgba(45, 51, 63, 0.5);
+  } 
 `;
+
 
 export const ProductPrice = styled.div`
   font-family: 'Lato', sans-serif;
   font-size: ${themeGet('fontSizes.3', '19')}px;
   font-weight: ${themeGet('fontWeights.6', '700')};
-  color: ${themeGet('colors.primary', '#009E7F')};
+  color: #EB522F;
+  margin-top: 50px;
 `;
 
 export const SalePrice = styled.span`

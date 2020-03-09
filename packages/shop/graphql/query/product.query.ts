@@ -70,9 +70,9 @@ export const GET_PRODUCT_DETAILS = gql`
       id
       slug
       title
-      type
       unit
       price
+      type
       salePrice
       description
       discountInPercent
@@ -113,11 +113,12 @@ export const GET_PRODUCT_DETAILS = gql`
 export const GET_PRODUCT_TELIO_DETAILS = gql`
   query getDetailProduct($product_id: String!) {
     getDetailProduct(product_id: $product_id) {
-      _id
+        _id
         name
         reference_id
         EAN
         SKU
+        type
         image
         description
         city
