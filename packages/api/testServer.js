@@ -25,6 +25,11 @@ const typeDefs = gql`
     icon: String
     children: [Category]
   }
+  type Image {
+    id: ID
+    url: String
+  }
+
   type Product {
     _id: String
     name: String
@@ -34,7 +39,9 @@ const typeDefs = gql`
     description: String
     image: String
     brand: String
+    type: String
     status: String
+    gallery: [Image]
     variants: [String]
     quantity: Int
     categories: [Category]
@@ -80,7 +87,7 @@ const typeDefs = gql`
       limit: Int
     ): PaginatedProduct
     getCategories(category: String, offset: Int, limit: Int): PaginatedCategory
-    getDetailProduct(slug: String): Product
+    getDetailProduct(product_id: String): Product
     getDetailCategory(category: String): Category
   }
   type Mutation {
@@ -107,8 +114,15 @@ const productSchema = new Schema(
     image: { type: String },
     city: { type: String },
     status: { type: String },
+    type: { type: String },
     variants: [{ type: String }],
     categories: [{ type: String }],
+    gallery: [
+      {
+        id: { type: String },
+        url: { type: String },
+      }
+    ],
     price: { type: Number },
     quantity: { type: Number },
     brand: { type: String },
@@ -169,7 +183,6 @@ const resolvers = {
       const items = await Product.find()
         .skip(args.offset)
         .limit(args.limit);
-      console.log(items);
       return { docs: items, count: await Product.count({}), hasMore: true };
     },
     getDetailProduct: async (_, args) => {

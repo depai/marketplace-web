@@ -20,7 +20,7 @@ import Placeholder from 'components/Placeholder/Placeholder';
 import Fade from 'react-reveal/Fade';
 import NoResultFound from 'components/NoResult/NoResult';
 
-const QuickView = dynamic(() => import('../QuickView/QuickView'));
+const QuickView = dynamic(() => import('../QuickViewTelio/QuickView'));
 
 const GET_PRODUCTS = gql`
   query getProducts(
@@ -53,6 +53,9 @@ const GET_PRODUCTS = gql`
         }
         price
         brand
+        gallery{
+          url
+        }
         suggestedPurchasePrice
         specialPrice {
             spPrice
@@ -93,11 +96,13 @@ type ProductsProps = {
   };
   fetchLimit?: number;
   loadMore?: boolean;
+  type?: string;
 };
 export const Products: React.FC<ProductsProps> = ({
   deviceType,
   fetchLimit = 8,
   loadMore = true,
+  type = '',
 }) => {
   const router = useRouter();
   const [loadingMore, toggleLoading] = useState(false);
@@ -194,7 +199,6 @@ export const Products: React.FC<ProductsProps> = ({
       },
     });
   };
-
   return (
     <>
       <ProductsRow>
