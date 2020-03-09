@@ -82,7 +82,7 @@ export const CartProvider = (props: any) => {
   const add = (event, item: Product) => {
     // TODO: cookie storage
     if (products.length) {
-      const index = products.findIndex(product => product.id === item.id);
+      const index = products.findIndex(product => product._id === item._id);
       if (index !== -1) {
         // if product already available in the cart
         const product = products[index];
@@ -130,7 +130,7 @@ export const CartProvider = (props: any) => {
   };
 
   const update = (itemId: any, quantity: number) => {
-    const index = products.findIndex(product => product.id === itemId);
+    const index = products.findIndex(product => product._id === itemId);
     if (quantity < 1 && index > -1) {
       // delete if quantity, 0
       products.splice(index, 1);

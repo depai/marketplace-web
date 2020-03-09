@@ -221,6 +221,7 @@ export const Products: React.FC<ProductsProps> = ({
                     handleQuickViewModal(item, deviceType, handleModalClose)
                   }
                 />
+
               </Fade>
             </ProductCardWrapper>
           </ProductsCol>
@@ -230,7 +231,7 @@ export const Products: React.FC<ProductsProps> = ({
         <ButtonWrapper>
           <Button
             onClick={handleLoadMore}
-            title='Load More'
+            title='Xem thêm'
             intlButtonId='loadMoreBtn'
             size='small'
             isLoading={loadingMore}

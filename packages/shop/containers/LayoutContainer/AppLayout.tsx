@@ -58,6 +58,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
     pathname === BOOK_PAGE ||
     pathname === FURNITURE_PAGE ||
     pathname === BAGS_PAGE;
+
   return (
     <LayoutWrapper className={`layoutWrapper ${className}`}>
       {(mobile || tablet) && (
@@ -80,7 +81,6 @@ const Layout: FunctionComponent<LayoutProps> = ({
             pathname={pathname}
           />
           <Header
-            // items={data.getCategories.docs}
             className={`${isSticky ? 'sticky' : 'unSticky'} ${
               isHomePage ? 'home' : ''
             }`}

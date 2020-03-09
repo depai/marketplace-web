@@ -169,7 +169,6 @@ const resolvers = {
       const items = await Product.find()
         .skip(args.offset)
         .limit(args.limit);
-      console.log(items);
       return { docs: items, count: await Product.count({}), hasMore: true };
     },
     getDetailProduct: async (_, args) => {
@@ -181,7 +180,6 @@ const resolvers = {
         .limit(args.limit);
       const util = require('util');
 
-      // console.log(util.inspect(categories, {showHidden: false, depth: null}))
       const count = await Category.count({});
       return { docs: categories, count: count };
     },
