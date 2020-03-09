@@ -9,7 +9,7 @@ import { Modal } from '@redq/reuse-modal';
 import ProductSingleWrapper, {
   ProductSingleContainer,
 } from 'styled/product-single.style';
-import CartPopUp from 'containers/Cart/CartPopUp';
+import CartPopUp from 'containers/CartTelio/CartPopUp';
 import { GET_PRODUCT_TELIO_DETAILS } from 'graphql/query/product.query';
 import {withApolloTelio} from "../../helper/apolloTelio";
 

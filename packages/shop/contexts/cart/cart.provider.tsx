@@ -64,7 +64,7 @@ export const CartProvider = (props: any) => {
     let finalTotal;
     products.forEach(product => {
       const quantity = product.quantity ? product.quantity : 1;
-      const price = product.salePrice ? product.salePrice : product.price;
+      const price = product.specialPrice.spPrice ? product.specialPrice.spPrice : product.price;
       const itemPrice = Currency(quantity).multiply(price);
       total = Currency(total).add(itemPrice);
     });

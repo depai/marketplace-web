@@ -13,6 +13,9 @@ export interface Product {
   image: string;
   quantity: number;
   salePrice: number;
+  "specialPrice": {
+    "spPrice": number,
+  },
 }
 
 export interface Category {

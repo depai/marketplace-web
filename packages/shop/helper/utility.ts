@@ -114,7 +114,7 @@ export const getProductQuantity = (
 
 export const calculateItemPrice = (product: CartProduct): number => {
   const quantity = product.quantity ? product.quantity : 1;
-  const price = product.salePrice ? product.salePrice : product.price;
+  const price = product.specialPrice.spPrice ? product.specialPrice.spPrice : product.price;
   const itemPrice = Currency(quantity).multiply(price);
   const itemPriceValue: number = Number(itemPrice.value);
   return itemPriceValue;
@@ -124,7 +124,7 @@ export const calculateTotalPrice = (products: CartProduct[]): number => {
   let total = Currency(0);
   products.forEach(product => {
     const quantity = product.quantity ? product.quantity : 1;
-    const price = product.salePrice ? product.salePrice : product.price;
+    const price = product.specialPrice.spPrice ? product.specialPrice.spPrice : product.price;
     const itemPrice = Currency(quantity).multiply(price);
     total = Currency(total).add(itemPrice);
   });
@@ -205,22 +205,24 @@ export const cartAnimation = event => {
   let disTop = imgtodrag.getBoundingClientRect().top;
   let cartleft = viewcart.getBoundingClientRect().left;
   let carttop = viewcart.getBoundingClientRect().top;
-  let image = imgtodragImage.cloneNode(true);
-  image.style =
-    'z-index: 11111; width: 100px;opacity:1; position:fixed; top:' +
-    disTop +
-    'px;left:' +
-    disLeft +
-    'px;transition: left 1s, top 1s, width 1s, opacity 1s cubic-bezier(1, 1, 1, 1);border-radius: 50px; overflow: hidden; box-shadow: 0 21px 36px rgba(0,0,0,0.1)';
-  var rechange = document.body.appendChild(image);
-  setTimeout(function() {
-    image.style.left = cartleft + 'px';
-    image.style.top = carttop + 'px';
-    image.style.width = '40px';
-    image.style.opacity = '0';
-  }, 200);
-  setTimeout(function() {
-    rechange.parentNode.removeChild(rechange);
-  }, 1000);
+  if (imgtodragImage) {
+    let image = imgtodragImage.cloneNode(true);
+    image.style =
+        'z-index: 11111; width: 100px;opacity:1; position:fixed; top:' +
+        disTop +
+        'px;left:' +
+        disLeft +
+        'px;transition: left 1s, top 1s, width 1s, opacity 1s cubic-bezier(1, 1, 1, 1);border-radius: 50px; overflow: hidden; box-shadow: 0 21px 36px rgba(0,0,0,0.1)';
+    var rechange = document.body.appendChild(image);
+    setTimeout(function() {
+      image.style.left = cartleft + 'px';
+      image.style.top = carttop + 'px';
+      image.style.width = '40px';
+      image.style.opacity = '0';
+    }, 200);
+    setTimeout(function() {
+      rechange.parentNode.removeChild(rechange);
+    }, 1000);
+  }
   // End Animation Block
 };
