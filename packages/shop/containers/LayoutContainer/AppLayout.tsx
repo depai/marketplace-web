@@ -15,6 +15,8 @@ import {
   FURNITURE_PAGE,
   BOOK_PAGE,
 } from 'constants/navigation';
+import {withApolloTelio} from '../../helper/apolloTelio'
+
 const MobileHeader = dynamic(() => import('./Header/MobileHeader'), {
   ssr: false,
 });
@@ -78,6 +80,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
             pathname={pathname}
           />
           <Header
+            // items={data.getCategories.docs}
             className={`${isSticky ? 'sticky' : 'unSticky'} ${
               isHomePage ? 'home' : ''
             }`}
@@ -91,4 +94,4 @@ const Layout: FunctionComponent<LayoutProps> = ({
   );
 };
 
-export default Layout;
+export default withApolloTelio(Layout);

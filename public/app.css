@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+footer {
+  background-color: #2d333f;
+  color: #ffffff;
+}
+
+footer hr {
+  background-color: #fff;
+}
+
+footer .footer-copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+footer .footer-copyright .info,
+footer .footer-copyright .license {
+  margin: 2rem 3rem;
+}
+
+footer .footer-copyright .info h3,
+footer .footer-copyright .license h3 {
+  font-size: 1rem;
+}
+
+footer .row {
+  padding: 3rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+footer .row .policy {
+  font-size: 1.5rem;
+}
+
+footer .row .policy .list-policy {
+  list-style: none;
+}
+
+footer .row .policy .list-policy a {
+  color: #fff;
+}
+
+footer .row .payment-social i {
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 15px;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+}
+
+footer .row .payment-social .social-media {
+  margin-bottom: 3rem;
+}
+
+footer .row .payment-social h3 {
+  font-size: 1rem;
+}
+
+footer .row .location i {
+  padding-right: 1rem;
+}
+
+.login-form {
+  width: 340px;
+  margin: 50px auto;
+}
+
+.login-form form {
+  margin-bottom: 15px;
+  background: #f7f7f7;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+.login-form h2 {
+  margin: 0 0 15px;
+}
+
+.login-form .form-control,
+.login-form .btn {
+  min-height: 38px;
+  border-radius: 2px;
+}
+
+.login-form .btn {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.popup {
+  width: 600px;
+  height: 600px;
+  position: relative;
+}
+
+.popup .image {
+  width: 285px;
+  height: 440px;
+}
+
+.popup .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #185aa0;
+}
+
+.popup .content p {
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  padding: 3rem 0;
+}
+
+.popup .content button {
+  position: absolute;
+  left: 225px;
+  bottom: 0em;
+  margin-top: 5rem;
+  font-size: 1rem;
+  padding: 0.5rem 2.5rem;
+  border-radius: 5rem;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Averta', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin-top: 15px;
+}
+
+.header a {
+  color: #2d333f;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.header .bg-color {
+  background-color: #2d333f;
+  padding: 13px 22px;
+  margin-top: 15px;
+}
+
+.header .bg-color input {
+  height: 34px;
+  padding-right: 34px;
+  padding-left: 20px;
+}
+
+.header .btn-search {
+  right: 15px;
+  top: 0;
+  margin: 1px;
+  padding: 3px 9px;
+  background-color: #2d333f;
+  color: #ffffff;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+::-webkit-input-placeholder {
+  color: #999999;
+}
+
+:-ms-input-placeholder {
+  color: #999999;
+}
+
+::-ms-input-placeholder {
+  color: #999999;
+}
+
+::placeholder {
+  color: #999999;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.error {
+  color: red;
+}
+/*# sourceMappingURL=app.css.map */

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
 import { openModal } from '@redq/reuse-modal';
@@ -58,6 +58,28 @@ import {
   OFFER_PAGE,
   HELP_PAGE,
 } from 'constants/navigation';
+
+import { useQuery } from "@apollo/react-hooks";
+import gql from "graphql-tag";
+
+const GET_CATEGORIES = gql`
+  query getCategories($category: String) {
+    getCategories(category: $category) {
+      docs {
+        id
+        title
+        slug
+        icon
+        children {
+          id
+          title
+          slug
+        }
+      }
+    }
+  }
+`;
+
 type HeaderProps = {
   style?: any;
   className?: string;
@@ -136,12 +158,19 @@ const Header: React.FC<HeaderProps> = ({
   token,
   pathname,
 }) => {
+  const [categories, setCategories] = useState([]);
+  const { data, loading } = useQuery(GET_CATEGORIES, {});
+  useEffect(() => {
+    if (data.getCategories) {
+      setCategories(data.getCategories.docs);
+    }
+  }, []);
+  console.log(categories);
   const {
     state: { lang },
     toggleLanguage,
   } = useContext<any>(LanguageContext);
-
-  const activeMenuItem = MenuArray.find(item => item.link === pathname);
+  // const activeMenuItem = categories.find(item => item.slug === pathname);
 
   const selectedLangindex = LanguageArray.findIndex(x => x.id === lang);
 
@@ -150,14 +179,7 @@ const Header: React.FC<HeaderProps> = ({
     authDispatch,
   } = useContext<any>(AuthContext);
   const { state, dispatch } = useContext(SearchContext);
-  const [activeMenu, setActiveMenu] = useState(
-    activeMenuItem || {
-      link: GROCERY_PAGE,
-      icon: <FruitsVegetable />,
-      label: 'Grocery',
-    }
-  );
-
+  // const [activeMenu, setActiveMenu] = useState(activeMenuItem);
   const { text } = state;
   const handleSearch = (text: any) => {
     dispatch({
@@ -183,7 +205,7 @@ const Header: React.FC<HeaderProps> = ({
     }
   };
   const resetSearch = (selectedMenu: any) => {
-    setActiveMenu(selectedMenu);
+    // setActiveMenu(selectedMenu);
     dispatch({
       type: 'RESET',
     });
@@ -191,12 +213,12 @@ const Header: React.FC<HeaderProps> = ({
   const NavItem = (item: any) => {
     return (
       <NavLink
-        key={item.link}
+        key={item.id}
         onClick={() => resetSearch(item)}
         className='menu-item'
-        href={item.link}
-        label={item.label}
-        icon={item.icon}
+        href={`category?slug_cate=`+item.slug}
+        label={item.title}
+        // icon={item.icon}
         iconClass='menu-item-icon'
       />
     );
@@ -250,6 +272,7 @@ const Header: React.FC<HeaderProps> = ({
     pathname === BAGS_PAGE;
 
   return (
+
     <HeaderWrapper style={style} className={className}>
       <HeaderLeftSide>
         <Logo
@@ -263,7 +286,7 @@ const Header: React.FC<HeaderProps> = ({
         >
           <Link href={HOME_PAGE}>
             <a>
-              <img src={Logoimage} alt='pickbazar-admin' />
+              <img src="/logo-hn_2.png" alt='pickbazar-admin' />
             </a>
           </Link>
         </Logo>
@@ -273,15 +296,16 @@ const Header: React.FC<HeaderProps> = ({
             handler={
               <SelectedType>
                 <span>
-                  <TypeIcon>{activeMenu.icon}</TypeIcon>
-                  <span>{activeMenu.label}</span>
+                  {/* <TypeIcon>{activeMenu.icon}</TypeIcon> */}
+                  {/* <span>{activeMenu.slug}</span> */}
+                  <span>Danh mục sản phẩm</span>
                 </span>
                 <DropDownArrow>
                   <MenuDown />
                 </DropDownArrow>
               </SelectedType>
             }
-            content={<>{MenuArray.map(NavItem)}</>}
+            content={<>{categories.map(NavItem)}</>}
           />
         </MainMenu>
       </HeaderLeftSide>
