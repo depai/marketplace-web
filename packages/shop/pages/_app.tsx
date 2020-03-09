@@ -54,7 +54,7 @@ export default function ExtendedApp({
             <StickyProvider>
               <AuthProvider>
                 <>
-                  <AppLayout deviceType={deviceType}>
+                  <AppLayout {...pageProps} deviceType={deviceType}>
                     <Component {...pageProps} deviceType={deviceType} />
                   </AppLayout>
                   <GlobalStyle />
