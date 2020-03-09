@@ -25,13 +25,14 @@ import {
 import { LongArrowLeft, CartIcon } from 'components/AllSvgIcon';
 import ReadMore from 'components/Truncate/Truncate';
 import CarouselWithCustomDots from 'components/MultiCarousel/MultiCarousel';
-import Products from 'containers/Products/Products';
+import Products from 'containers/ProductsTelio/Products';
 import { CartContext } from 'contexts/cart/cart.context';
 import { CURRENCY } from 'helper/constant';
 import { findProductIndex, getProductQuantity } from 'helper/utility';
 import { Product } from 'interfaces';
 import { FormattedMessage } from 'react-intl';
 import LanguageContext from 'contexts/language/language.context';
+import { useQuery } from '@apollo/react-hooks';
 
 type ProdutDetailsProps = {
   product: Product | any;
@@ -53,7 +54,6 @@ const ProductDetails: React.FunctionComponent<ProdutDetailsProps> = ({
   const data = product;
   const index = findProductIndex(products, data._id);
   const quantity = getProductQuantity(products, index);
-
   const handleClick = e => {
     e.stopPropagation();
     add(e, data);
@@ -205,20 +205,20 @@ const ProductDetails: React.FunctionComponent<ProdutDetailsProps> = ({
         )}
       </ProductDetailsWrapper>
 
-      {/*<RelatedItems>*/}
-      {/*  <h2>*/}
-      {/*    <FormattedMessage*/}
-      {/*      id='intlReletedItems'*/}
-      {/*      defaultMessage='Related Items'*/}
-      {/*    />*/}
-      {/*  </h2>*/}
-      {/*  <Products*/}
-      {/*    type={product.type.toLowerCase()}*/}
-      {/*    deviceType={deviceType}*/}
-      {/*    loadMore={false}*/}
-      {/*    fetchLimit={10}*/}
-      {/*  />*/}
-      {/*</RelatedItems>*/}
+      {/* <RelatedItems>
+        <h2>
+          <FormattedMessage
+            id='intlReletedItems'
+            defaultMessage='Related Items'
+          />
+        </h2>
+        <Products
+          type={product.type.toLowerCase()}
+          deviceType={deviceType}
+          loadMore={false}
+          fetchLimit={10}
+        />
+      </RelatedItems> */}
     </>
   );
 };

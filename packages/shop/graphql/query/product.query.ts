@@ -120,6 +120,7 @@ export const GET_PRODUCT_TELIO_DETAILS = gql`
         SKU
         type
         image
+        type
         description
         city
         status
@@ -128,6 +129,9 @@ export const GET_PRODUCT_TELIO_DETAILS = gql`
         categories {
           title
           slug
+        }
+        gallery {
+          url
         }
         price
         brand

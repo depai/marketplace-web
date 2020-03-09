@@ -25,9 +25,11 @@ const typeDefs = gql`
     icon: String
     children: [Category]
   }
-  type Gallery {
+  type Image {
+    id: ID
     url: String
   }
+
   type Product {
     _id: String
     name: String
@@ -37,8 +39,9 @@ const typeDefs = gql`
     description: String
     image: String
     brand: String
-    status: String
     type: String
+    status: String
+    gallery: [Image]
     variants: [String]
     quantity: Int
     categories: [Category]
@@ -111,9 +114,15 @@ const productSchema = new Schema(
     image: { type: String },
     city: { type: String },
     status: { type: String },
+    type: { type: String },
     variants: [{ type: String }],
     categories: [{ type: String }],
-    type: { type: String },
+    gallery: [
+      {
+        id: { type: String },
+        url: { type: String },
+      },
+    ],
     price: { type: Number },
     quantity: { type: Number },
     brand: { type: String },

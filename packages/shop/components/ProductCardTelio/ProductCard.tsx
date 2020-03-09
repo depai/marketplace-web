@@ -71,7 +71,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
       update(data._id, value);
     }
   };
-
   return (
       <ProductCardWrapper onClick={onClick} className='product-card'>
         <ProductImageWrapper>
