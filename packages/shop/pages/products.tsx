@@ -1,15 +1,23 @@
 import React from 'react';
 import Head from 'next/head';
-import {withApollo} from "helper/apollo";
 import {Modal} from '@redq/reuse-modal';
 import BannerImg from "../image/Cloths.png";
-import Banner from "../containers/Banner/Banner";
-import {ContentSection, MainContentArea, SidebarSection} from "../styled/pages.style";
-import Sidebar from "../containers/Sidebar/Sidebar";
+import Banner from "../containers/BannerTelio/Banner";
+import {
+    ContentSection,
+    MainContentArea,
+    MobileCarouselDropdown,
+    OfferSection,
+    SidebarSection
+} from "../styled/pages.style";
+import Sidebar from "../containers/SidebarTelio/Sidebar";
 import Products from "../containers/ProductsTelio/Products";
 import {withApolloTelio} from "../helper/apolloTelio";
-
-const PAGE_TYPE = 'grocery';
+import StoreNav from "../components/StoreNav/StoreNav";
+import storeType from "../constants/storeType";
+import Carousel from "../components/Carousel/Carousel";
+import OFFERS from "../data/offers";
+import CartPopUp from "../containers/CartTelio/CartPopUp";
 
 const products = ({ deviceType }) => {
     const targetRef = React.useRef(null);
@@ -25,16 +33,19 @@ const products = ({ deviceType }) => {
                     imageUrl={BannerImg}
                 />
                 <MainContentArea>
+                    <SidebarSection>
+                        <Sidebar deviceType={deviceType} />
+                    </SidebarSection>
                     <ContentSection>
                         <div ref={targetRef}>
                             <Products
-                                type={PAGE_TYPE}
                                 deviceType={deviceType}
                                 fetchLimit={16}
                             />
                         </div>
                     </ContentSection>
                 </MainContentArea>
+                <CartPopUp deviceType={deviceType} />
             </Modal>
         </>
     );

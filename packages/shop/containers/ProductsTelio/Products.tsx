@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import gql from 'graphql-tag';
 import { openModal, closeModal } from '@redq/reuse-modal';
-import ProductCard from 'components/ProductCard/ProductCard';
+import ProductCard from 'components/ProductCardTelio/ProductCard';
 import {
   ProductsRow,
   ProductsCol,
@@ -36,13 +36,16 @@ const GET_PRODUCTS = gql`
       limit: $limit
     ) {
       docs {
+        _id
         name
         reference_id
         EAN
         SKU
         image
+        description
         city
         status
+        quantity
         variants
         categories {
           title
@@ -77,6 +80,7 @@ const GET_PRODUCTS = gql`
         updatedAt
       }
       count
+      hasMore
     }
   }
 `;
@@ -87,13 +91,11 @@ type ProductsProps = {
     tablet: boolean;
     desktop: boolean;
   };
-  type: string;
   fetchLimit?: number;
   loadMore?: boolean;
 };
 export const Products: React.FC<ProductsProps> = ({
   deviceType,
-  type,
   fetchLimit = 8,
   loadMore = true,
 }) => {
@@ -101,9 +103,8 @@ export const Products: React.FC<ProductsProps> = ({
   const [loadingMore, toggleLoading] = useState(false);
   const { data, error, loading, fetchMore } = useQuery(GET_PRODUCTS, {
     variables: {
-      type: type,
-      text: router.query.text,
-      category: router.query.category,
+      keywords: router.query.text,
+      category: router.query.slug_cate,
       offset: 0,
       limit: fetchLimit,
     },
@@ -118,8 +119,8 @@ export const Products: React.FC<ProductsProps> = ({
   };
   const handleQuickViewModal = React.useCallback(
     (modalProps: any, deviceType: any, onModalClose: any) => {
-      if (router.pathname === '/product/[slug]') {
-        const as = `/product/${modalProps.slug}`;
+      if (router.pathname === '/detail/[slug]') {
+        const as = `/detail/${modalProps._id}`;
         router.push(router.pathname, as);
         return;
       }
@@ -144,8 +145,8 @@ export const Products: React.FC<ProductsProps> = ({
           },
         },
       });
-      const href = `${router.pathname}?${modalProps.slug}`;
-      const as = `/product/${modalProps.slug}`;
+      const href = `${router.pathname}?${modalProps._id}`;
+      const as = `/detail/${modalProps._id}`;
       router.push(href, as, { shallow: true });
     },
     []
@@ -168,7 +169,7 @@ export const Products: React.FC<ProductsProps> = ({
   }
 
   if (error) return <div>{error.message}</div>;
-  if (!data || !data.products || data.products.items.length === 0) {
+  if (!data || !data.getProducts || data.getProducts.docs.length === 0) {
     return <NoResultFound />;
   }
   const handleLoadMore = () => {
@@ -197,7 +198,7 @@ export const Products: React.FC<ProductsProps> = ({
   return (
     <>
       <ProductsRow>
-        {data.products.items.map((item: any, index: number) => (
+        {data.getProducts.docs.map((item: any, index: number) => (
           <ProductsCol key={index}>
             <ProductCardWrapper>
               <Fade
@@ -206,14 +207,14 @@ export const Products: React.FC<ProductsProps> = ({
                 style={{ height: '100%' }}
               >
                 <ProductCard
-                  title={item.title}
+                  title={item.name}
                   description={item.description}
                   image={item.image}
-                  weight={item.unit}
+                  quantityWarehouse={item.quantity}
                   currency={CURRENCY}
                   price={item.price}
-                  salePrice={item.salePrice}
-                  discountInPercent={item.discountInPercent}
+                  salePrice={item.specialPrice.spPrice}
+                  discountInPercent={item.specialPrice? (1-(item.specialPrice.spPrice / item.price ))*100 : 0}
                   data={item}
                   deviceType={deviceType}
                   onClick={() =>
@@ -225,7 +226,7 @@ export const Products: React.FC<ProductsProps> = ({
           </ProductsCol>
         ))}
       </ProductsRow>
-      {loadMore && data.products.hasMore && (
+      {loadMore && data.getProducts.hasMore && (
         <ButtonWrapper>
           <Button
             onClick={handleLoadMore}

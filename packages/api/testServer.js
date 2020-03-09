@@ -14,10 +14,11 @@ mongoose.connection.once('open', () =>
 
 const typeDefs = gql`
   type User {
-    id: ID!
+    id: ID
     name: String
   }
   type Category {
+    id: String
     title: String
     slug: String
     type: String
@@ -25,14 +26,17 @@ const typeDefs = gql`
     children: [Category]
   }
   type Product {
+    _id: String
     name: String
     reference_id: String
     EAN: String
     SKU: String
+    description: String
     image: String
     brand: String
     status: String
     variants: [String]
+    quantity: Int
     categories: [Category]
     price: Int
     suggestedPurchasePrice: Int
@@ -61,6 +65,7 @@ const typeDefs = gql`
   type PaginatedProduct {
     docs: [Product]
     count: Int
+    hasMore: Boolean
   }
   type PaginatedCategory {
     docs: [Category]
@@ -98,12 +103,14 @@ const productSchema = new Schema(
     reference_id: { type: String, required: true, index: { unique: true } },
     EAN: { type: String },
     SKU: { type: String, required: true, index: { unique: true } },
+    description: { type: String },
     image: { type: String },
     city: { type: String },
     status: { type: String },
     variants: [{ type: String }],
     categories: [{ type: String }],
     price: { type: Number },
+    quantity: { type: Number },
     brand: { type: String },
     suggestedPurchasePrice: { type: Number },
     specialPrice: {
@@ -159,10 +166,11 @@ const resolvers = {
   Query: {
     getUsers: async () => await User.find({}).exec(),
     getProducts: async (_, args) => {
-      const items = await Product.find({ name: args.keywords })
+      const items = await Product.find()
         .skip(args.offset)
         .limit(args.limit);
-      return { docs: items, count: await Product.count({}) };
+      console.log(items);
+      return { docs: items, count: await Product.count({}), hasMore: true };
     },
     getDetailProduct: async (_, args) => {
       return Product.findOne({ _id: new ObjectId(args.product_id) });
@@ -171,12 +179,15 @@ const resolvers = {
       const categories = await Category.find()
         .skip(args.offset)
         .limit(args.limit);
+      const util = require('util');
+
+      // console.log(util.inspect(categories, {showHidden: false, depth: null}))
       const count = await Category.count({});
       return { docs: categories, count: count };
     },
     getDetailCategory: async (_, args) => {
       const category = await Category.findOne({
-        _id: new ObjectId(args.category_id),
+        slug: args.slug,
       });
     },
   },
@@ -220,6 +231,6 @@ app.use(function(req, res, next) {
 });
 server.applyMiddleware({ app });
 
-app.listen({ port: 4000 }, () =>
-  console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
+app.listen({ port: 4001 }, () =>
+  console.log(`🚀 Server ready at http://localhost:4001${server.graphqlPath}`)
 );

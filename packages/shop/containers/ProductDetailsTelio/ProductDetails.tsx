@@ -50,7 +50,7 @@ const ProductDetails: React.FunctionComponent<ProdutDetailsProps> = ({
   }: any = useContext(LanguageContext);
   const { add, update, products } = useContext(CartContext);
   const data = product;
-  const index = findProductIndex(products, data._id);
+  const index = findProductIndex(products, data.id);
   const quantity = getProductQuantity(products, index);
 
   const handleClick = e => {
@@ -62,7 +62,7 @@ const ProductDetails: React.FunctionComponent<ProdutDetailsProps> = ({
     if (index === -1 && value === 1) {
       add(e, data);
     } else {
-      update(data._id, value);
+      update(data.id, value);
     }
   };
 
@@ -96,15 +96,15 @@ const ProductDetails: React.FunctionComponent<ProdutDetailsProps> = ({
             </BackButton>
 
             <CarouselWithCustomDots
-              items={[product.image]}
+              items={product.gallery}
               deviceType={deviceType}
             />
           </ProductPreview>
         )}
 
         <ProductInfo dir={lang === 'ar' || lang === 'he' ? 'rtl' : 'ltr'}>
-          <ProductTitle>{product.name}</ProductTitle>
-          <ProductWeight>{product.quantity}</ProductWeight>
+          <ProductTitle>{product.title}</ProductTitle>
+          <ProductWeight>{product.unit}</ProductWeight>
           <ProductDescription>
             <ReadMore character={600}>{product.description}</ReadMore>
           </ProductDescription>

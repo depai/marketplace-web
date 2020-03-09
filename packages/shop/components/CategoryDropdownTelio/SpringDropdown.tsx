@@ -112,6 +112,7 @@ const CategoryDropdown: React.FC<DropdownProps> = ({
     <DropdownWrapper className={className}>
       {items.length !== 0 &&
         items.map(dropdown => {
+          console.log(dropdown);
           return (
             <DropdownItem
               key={dropdown.slug}

@@ -109,3 +109,52 @@ export const GET_PRODUCT_DETAILS = gql`
     }
   }
 `;
+
+export const GET_PRODUCT_TELIO_DETAILS = gql`
+  query getDetailProduct($product_id: String!) {
+    getDetailProduct(product_id: $product_id) {
+      _id
+        name
+        reference_id
+        EAN
+        SKU
+        image
+        description
+        city
+        status
+        quantity
+        variants
+        categories {
+          title
+          slug
+        }
+        price
+        brand
+        suggestedPurchasePrice
+        specialPrice {
+            spPrice
+            fromDate
+            toDate
+        }
+        parentSKU
+        suppliers {
+                _id
+                id
+                name
+                primarySupplier
+                priorityNumber
+                sellingPrice
+            }
+        createdBy {
+            name
+            id
+        }
+        updatedBy {
+            name
+            id
+        }
+        createdAt
+        updatedAt
+    }
+  }
+`;

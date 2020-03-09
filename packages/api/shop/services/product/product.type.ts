@@ -79,7 +79,7 @@ export default class Product {
   title: string;
 
   @Field()
-  type: ProductType;
+  type: string;
 
   @Field(() => [Category])
   categories: Category[];
