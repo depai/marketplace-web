@@ -68,7 +68,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     if (index === -1 && value === 1) {
       add(e, data);
     } else {
-      update(data.id, value);
+      update(data._id, value);
     }
   };
 
