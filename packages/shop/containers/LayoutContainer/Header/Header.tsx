@@ -323,7 +323,7 @@ const Header: React.FC<HeaderProps> = ({
         />
       ) : null}
       <HeaderRightSide>
-        <NavLink
+        {/* <NavLink
           className='menu-item'
           href={OFFER_PAGE}
           label='Offer'
@@ -336,7 +336,7 @@ const Header: React.FC<HeaderProps> = ({
           intlId='navlinkHelp'
           iconClass='menu-icon'
           icon={<HelpIcon />}
-        />
+        /> */}
         <LangSwithcer>
           <Popover
             className='right'
@@ -359,7 +359,7 @@ const Header: React.FC<HeaderProps> = ({
           <Button
             onClick={signInOutForm}
             size='small'
-            title='Join'
+            title='Login'
             style={{ fontSize: 15, color: '#fff' }}
             intlButtonId='joinButton'
           />
