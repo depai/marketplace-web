@@ -17,7 +17,6 @@ import { getProductQuantity, findProductIndex } from '../helpers/utility';
 type ProductCardProps = {
     title: string;
     image: any;
-    weight: string;
     currency: string;
     description: string;
     price: number;
@@ -33,15 +32,16 @@ type ProductCardProps = {
     updateCart?: any;
     value?: any;
     deviceType?: any;
+    quantityWarehouse: number;
 };
 
 const ProductCardDemo: React.FC<ProductCardProps> = ({
      title,
      image,
-     weight,
      price,
      salePrice,
      discountInPercent,
+
      cartProducts,
      addToCart,
      updateCart,
@@ -52,6 +52,7 @@ const ProductCardDemo: React.FC<ProductCardProps> = ({
      decrement,
      data,
      deviceType,
+      quantityWarehouse,
      onClick,
      ...props
  }) => {
@@ -84,7 +85,7 @@ const ProductCardDemo: React.FC<ProductCardProps> = ({
             </ProductImageWrapper>
             <ProductInfo>
                 <h3 className='product-title'>{title}</h3>
-                <span className='product-weight'>{weight}</span>
+                <span className='product-weight'>Còn {quantityWarehouse} sản phẩm</span>
                 <div className='product-meta'>
                     <div className='productPriceWrapper'>
                          <span className='product-price-demo'>

@@ -27,6 +27,7 @@ import {
   ILFlag,
   ESFlag,
   SAFlag,
+  VIFlag,
 } from 'components/AllSvgIcon';
 import HeaderWrapper, {
   HeaderLeftSide,
@@ -128,6 +129,7 @@ const LanguageArray = [
   { id: 'de', label: 'German', intlLangName: 'intlGerman', icon: <DEFlag /> },
   { id: 'he', label: 'Hebrew', intlLangName: 'intlHebrew', icon: <ILFlag /> },
   { id: 'es', label: 'Spanish', intlLangName: 'intlSpanish', icon: <ESFlag /> },
+  { id: 'vi', label: 'Vietnam', intlLangName: 'intlVietnam', icon: <VIFlag /> },
 ];
 
 const Header: React.FC<HeaderProps> = ({

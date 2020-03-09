@@ -6,18 +6,12 @@ import Banner from "../containers/BannerTelio/Banner";
 import {
     ContentSection,
     MainContentArea,
-    MobileCarouselDropdown,
-    OfferSection,
     SidebarSection
 } from "../styled/pages.style";
 import Sidebar from "../containers/SidebarTelio/Sidebar";
 import Products from "../containers/ProductsTelio/Products";
 import {withApolloTelio} from "../helper/apolloTelio";
-import StoreNav from "../components/StoreNav/StoreNav";
-import storeType from "../constants/storeType";
-import Carousel from "../components/Carousel/Carousel";
-import OFFERS from "../data/offers";
-import CartPopUp from "../containers/CartTelio/CartPopUp";
+import CartPopUp from 'containers/CartTelio/CartPopUp';
 
 const products = ({ deviceType }) => {
     const targetRef = React.useRef(null);

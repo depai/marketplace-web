@@ -121,7 +121,6 @@ export const ProductInfo = styled.div`
   }
   
   .cart-button {
-      margin: 10px auto;
       border: 2px solid #f7f7f7;
       border-radius: 18px;
       height: 36px;
@@ -153,6 +152,7 @@ export const ProductInfo = styled.div`
 
   .product-meta {
     margin-top: 30px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
