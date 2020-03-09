@@ -61,27 +61,6 @@ import {
   HELP_PAGE,
 } from 'constants/navigation';
 
-import { useQuery } from "@apollo/react-hooks";
-import gql from "graphql-tag";
-
-const GET_CATEGORIES = gql`
-  query getCategories($category: String) {
-    getCategories(category: $category) {
-      docs {
-        id
-        title
-        slug
-        icon
-        children {
-          id
-          title
-          slug
-        }
-      }
-    }
-  }
-`;
-
 type HeaderProps = {
   style?: any;
   className?: string;
@@ -152,6 +131,7 @@ const LanguageArray = [
   { id: 'de', label: 'German', intlLangName: 'intlGerman', icon: <DEFlag /> },
   { id: 'he', label: 'Hebrew', intlLangName: 'intlHebrew', icon: <ILFlag /> },
   { id: 'es', label: 'Spanish', intlLangName: 'intlSpanish', icon: <ESFlag /> },
+  { id: 'vi', label: 'Vietnam', intlLangName: 'intlVietnam', icon: <USFlag /> },
 ];
 
 const GET_CATEGORIES = gql`
@@ -185,13 +165,11 @@ const Header: React.FC<HeaderProps> = ({
       setCategories(data.getCategories.docs);
     }
   }, []);
-  console.log(categories);
   const {
     state: { lang },
     toggleLanguage,
   } = useContext<any>(LanguageContext);
   // const activeMenuItem = categories.find(item => item.slug === pathname);
-
   const selectedLangindex = LanguageArray.findIndex(x => x.id === lang);
 
   const {
@@ -281,7 +259,6 @@ const Header: React.FC<HeaderProps> = ({
       },
     });
   };
-  const [categories, setCategories] = useState([]);
 
   const isHomePage =
     pathname === HOME_PAGE ||
@@ -292,7 +269,6 @@ const Header: React.FC<HeaderProps> = ({
     pathname === FURNITURE_PAGE ||
     pathname === BAGS_PAGE;
 
-  const { data, loading } = useQuery(GET_CATEGORIES, {});
   useEffect(() => {
     if (data.getCategories) {
       setCategories(data.getCategories.docs)
@@ -300,7 +276,6 @@ const Header: React.FC<HeaderProps> = ({
   }, []);
 
   return (
-
     <HeaderWrapper style={style} className={className}>
       <HeaderLeftSide>
         <Logo
