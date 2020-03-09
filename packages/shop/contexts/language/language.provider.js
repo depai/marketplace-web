@@ -13,7 +13,7 @@ const LanguageProvider = ({ children, messages }) => {
     localStorage.setItem('lang', lang);
   };
   useEffect(() => {
-    const localLang = localStorage.getItem('lang');
+    const localLang = localStorage.getItem('lang') ?? initialState.lang;
     if (localLang) {
       toggleLanguage(localLang);
     } else {
@@ -22,7 +22,6 @@ const LanguageProvider = ({ children, messages }) => {
   }, []);
 
   let isRtl = state.lang === 'ar' || state.lang === 'he' ? true : false;
-
   return (
     <LanguageContext.Provider value={{ state, toggleLanguage, dispatch }}>
       <IntlProvider locale={state.lang} messages={messages[state.lang]}>
