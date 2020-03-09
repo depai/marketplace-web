@@ -27,6 +27,7 @@ import {
   CNFlag,
   USFlag,
   ILFlag,
+  VIFlag,
   ESFlag,
   SAFlag,
 } from 'components/AllSvgIcon';
@@ -131,7 +132,7 @@ const LanguageArray = [
   { id: 'de', label: 'German', intlLangName: 'intlGerman', icon: <DEFlag /> },
   { id: 'he', label: 'Hebrew', intlLangName: 'intlHebrew', icon: <ILFlag /> },
   { id: 'es', label: 'Spanish', intlLangName: 'intlSpanish', icon: <ESFlag /> },
-  { id: 'vi', label: 'Vietnam', intlLangName: 'intlVietnam', icon: <USFlag /> },
+  { id: 'vi', label: 'Vietnam', intlLangName: 'intlVietnam', icon: <VIFlag /> },
 ];
 
 const GET_CATEGORIES = gql`

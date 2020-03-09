@@ -47,7 +47,7 @@ const QuickView: React.FunctionComponent<QuickViewProps> = ({
 }) => {
   const { add, update, products } = useContext(CartContext);
   const {
-    id,
+    _id,
     type,
     name,
     unit,
@@ -60,13 +60,13 @@ const QuickView: React.FunctionComponent<QuickViewProps> = ({
     image,
     categories,
   } = modalProps;
-  console.log(modalProps);
   const {
     state: { lang },
   }: any = useContext(LanguageContext);
 
-  const index = findProductIndex(products, id);
+  const index = findProductIndex(products, _id);
   const quantityOrder = getProductQuantity(products, index);
+
   const handleClick = (e: any) => {
     e.stopPropagation();
     add(e, modalProps);
@@ -76,7 +76,7 @@ const QuickView: React.FunctionComponent<QuickViewProps> = ({
     if (index === -1 && value === 1) {
       add(e, modalProps);
     } else {
-      update(id, value);
+      update(_id, value);
     }
   };
 
@@ -120,7 +120,7 @@ const QuickView: React.FunctionComponent<QuickViewProps> = ({
                 <ProductInfoTelio>
                   Thương hiệu: <span>{brand}</span>
                   SKU# <span>{SKU}</span>
-                  Xuất xứ: <span>{`Việt Nam`}</span>  
+                  Xuất xứ: <span>{`Việt Nam`}</span>
                 </ProductInfoTelio>
                 <ProductMeta>{unit}</ProductMeta>
                 <ProductDescription>
