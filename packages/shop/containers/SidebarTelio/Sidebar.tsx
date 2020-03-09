@@ -1,26 +1,26 @@
-import React, { useContext } from 'react';
-import { useRouter } from 'next/router';
-import { useQuery } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
-import Sticky from 'react-stickynode';
-import { Scrollbars } from 'react-custom-scrollbars';
-import Popover from 'components/Popover/Popover';
-import CategoryDropdown from 'components/CategoryDropdown/SpringDropdown';
-import { ArrowDropDown, CategoryIcon } from 'components/AllSvgIcon';
-import { SearchContext } from 'contexts/search/search.context';
-import { useStickyState } from 'contexts/app/app.provider';
+import React, { useContext } from "react";
+import { useRouter } from "next/router";
+import { useQuery } from "@apollo/react-hooks";
+import gql from "graphql-tag";
+import Sticky from "react-stickynode";
+import { Scrollbars } from "react-custom-scrollbars";
+import Popover from "components/Popover/Popover";
+import CategoryDropdown from "components/CategoryDropdown/SpringDropdown";
+import { ArrowDropDown, CategoryIcon } from "components/AllSvgIcon";
+import { SearchContext } from "contexts/search/search.context";
+import { useStickyState } from "contexts/app/app.provider";
 import {
   SidebarMobileLoader,
-  SidebarLoader,
-} from 'components/Placeholder/Placeholder';
+  SidebarLoader
+} from "components/Placeholder/Placeholder";
 
 import {
   CategoryWrapper,
   PopoverHandler,
   PopoverWrapper,
   SidebarWrapper,
-  Loading,
-} from './Sidebar.style';
+  Loading
+} from "./Sidebar.style";
 import {
   Accessories,
   BathOil,
@@ -51,8 +51,8 @@ import {
   Snacks,
   Tops,
   Wallet,
-  WomenDress,
-} from 'components/AllSvgIcon';
+  WomenDress
+} from "components/AllSvgIcon";
 
 const GET_CATEGORIES = gql`
   query getCategories($category: String) {
@@ -68,7 +68,6 @@ const GET_CATEGORIES = gql`
           slug
         }
       }
-      count
     }
   }
 `;
@@ -103,7 +102,7 @@ let iconTypes = {
   Snacks: Snacks,
   Tops: Tops,
   Wallet: Wallet,
-  WomenDress: WomenDress,
+  WomenDress: WomenDress
 };
 
 type SidebarCategoryProps = {
@@ -115,37 +114,37 @@ type SidebarCategoryProps = {
 };
 
 const SidebarCategory: React.FC<SidebarCategoryProps> = ({
-  deviceType: { mobile, tablet, desktop },
+  deviceType: { mobile, tablet, desktop }
 }) => {
   const { state, dispatch } = useContext(SearchContext);
   const router = useRouter();
   const { pathname } = router;
-  const { data, loading } = useQuery(GET_CATEGORIES, {
-  });
-  const selectedQueries = state && state.slug_cate && state.slug_cate.split(',');
+  const { data, loading } = useQuery(GET_CATEGORIES, {});
+  const selectedQueries =
+    state && state.slug_cate && state.slug_cate.split(",");
   const handleCategorySelection = (slug: string) => {
     dispatch({
-      type: 'UPDATE',
+      type: "UPDATE",
       payload: {
         ...state,
         page: 1,
-        slug_cate: `${slug}`,
-      },
+        slug_cate: `${slug}`
+      }
     });
     const { page, ...urlState } = state;
     router.push(
       {
-        pathname: '/categories',
-        query: { ...urlState, slug_cate: slug },
+        pathname: "/categories",
+        query: { ...urlState, slug_cate: slug }
       },
       {
-        pathname: '/categories',
-        query: { ...urlState, slug_cate: slug },
+        pathname: "/categories",
+        query: { ...urlState, slug_cate: slug }
       },
       { shallow: true }
     );
   };
-  const isSidebarSticky = useStickyState('isSidebarSticky');
+  const isSidebarSticky = useStickyState("isSidebarSticky");
 
   if (!data || loading) {
     if (mobile || tablet) {

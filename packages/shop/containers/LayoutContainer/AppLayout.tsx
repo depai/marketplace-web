@@ -15,9 +15,8 @@ import {
   FURNITURE_PAGE,
   BOOK_PAGE,
 } from 'constants/navigation';
-import gql from 'graphql-tag';
-import { useQuery } from '@apollo/react-hooks';
-import {withApolloTelio} from "../../helper/apolloTelio";
+import {withApolloTelio} from '../../helper/apolloTelio'
+
 const MobileHeader = dynamic(() => import('./Header/MobileHeader'), {
   ssr: false,
 });
@@ -42,24 +41,6 @@ type LayoutProps = {
   token?: string;
 };
 
-const GET_CATEGORIES = gql`
-  query getCategories($category: String) {
-    getCategories(category: $category) {
-      docs {
-        id
-        title
-        slug
-        icon
-        children {
-          id
-          title
-          slug
-        }
-      }
-    }
-  }
-`;
-
 const Layout: FunctionComponent<LayoutProps> = ({
   className,
   children,
@@ -77,8 +58,6 @@ const Layout: FunctionComponent<LayoutProps> = ({
     pathname === BOOK_PAGE ||
     pathname === FURNITURE_PAGE ||
     pathname === BAGS_PAGE;
-
-  const { data, loading } = useQuery(GET_CATEGORIES, {});
 
   return (
     <LayoutWrapper className={`layoutWrapper ${className}`}>
