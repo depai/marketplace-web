@@ -18,12 +18,8 @@ const typeDefs = gql`
     name: String
   }
   type Category {
-    id: String
+    _id: String
     title: String
-    slug: String
-    type: String
-    icon: String
-    children: [Category]
   }
   type Image {
     id: ID
@@ -33,28 +29,7 @@ const typeDefs = gql`
   type Product {
     _id: String
     name: String
-    reference_id: String
-    EAN: String
-    SKU: String
-    description: String
-    image: String
-    brand: String
-    type: String
-    status: String
-    gallery: [Image]
-    variants: [String]
-    quantity: Int
-    categories: [Category]
-    price: Int
-    suggestedPurchasePrice: Int
-    specialPrice: SpecialPrice
-    city: String
-    parentSKU: String
-    suppliers: [Supplier]
-    createdBy: User
-    updatedBy: User
-    createdAt: String
-    updatedAt: String
+    category: Category
   }
   type SpecialPrice {
     spPrice: String
@@ -92,6 +67,8 @@ const typeDefs = gql`
   }
   type Mutation {
     addUser(userName: String!, email: String!): User
+    createCategory(title: String!): Category
+    createProduct(name: String!, category: String!): Product
   }
 `;
 
@@ -107,86 +84,33 @@ const User = mongoose.model('user', userSchema);
 const productSchema = new Schema(
   {
     name: { type: String, required: true },
-    reference_id: { type: String, required: true, index: { unique: true } },
-    EAN: { type: String },
-    SKU: { type: String, required: true, index: { unique: true } },
-    description: { type: String },
-    image: { type: String },
-    city: { type: String },
-    status: { type: String },
-    type: { type: String },
-    variants: [{ type: String }],
-    categories: [{ type: String }],
-    gallery: [
-      {
-        id: { type: String },
-        url: { type: String },
-      },
-    ],
-    price: { type: Number },
-    quantity: { type: Number },
-    brand: { type: String },
-    suggestedPurchasePrice: { type: Number },
-    specialPrice: {
-      spPrice: { type: Number },
-      fromDate: { type: String },
-      toDate: { type: String },
-    },
-    parentSKU: { type: String },
-    suppliers: [
-      {
-        _id: false,
-        id: { type: SchemaTypes.ObjectId, required: true },
-        name: { type: String, required: true },
-        primarySupplier: { type: Boolean },
-        priorityNumber: { type: Number },
-        sellingPrice: { type: SchemaTypes.Decimal128 },
-      },
-    ],
-    createdBy: {
-      name: { type: String },
-      id: { type: String },
-    },
-    updatedBy: {
-      name: { type: String },
-      id: { type: String },
-    },
-    createdAt: {
-      type: Date,
-    },
-    updatedAt: {
-      type: Date,
-    },
+    category: { type: Schema.Types.ObjectId, ref: 'category' },
   },
   { timestamps: true }
 );
 
-const Product = mongoose.model('products', productSchema);
+const Product = mongoose.model('product', productSchema);
 
 const categorySchema = new Schema(
   {
     title: { type: String, required: true },
-    slug: { type: String, required: true, index: { unique: true } },
-    type: { type: String },
-    icon: { type: String, required: true, index: { unique: true } },
-    children: { type: Schema.Types.Mixed },
   },
   { timestamps: true }
 );
 
-const Category = mongoose.model('categories', categorySchema);
+const Category = mongoose.model('category', categorySchema);
 
 const resolvers = {
   Query: {
     getUsers: async () => await User.find({}).exec(),
     getProducts: async (_, args) => {
-      const items = await Product.find()
-        .skip(args.offset)
-        .limit(args.limit);
+      const items = await Product.find().populate('category');
       return { docs: items, count: await Product.count({}), hasMore: true };
     },
     getDetailProduct: async (_, args) => {
-      return Product.findOne({ _id: new ObjectId(args.product_id) });
+      return Product.findOne({ _id: new ObjectId(args.product_id) }).populate(
+        'category'
+      );
     },
     getCategories: async (_, args) => {
       const categories = await Category.find()
@@ -207,6 +131,22 @@ const resolvers = {
     addUser: async (_, args) => {
       try {
         let response = await User.create(args);
+        return response;
+      } catch (e) {
+        return e.message;
+      }
+    },
+    createCategory: async (_, args) => {
+      try {
+        let response = await Category.create(args);
+        return response;
+      } catch (e) {
+        return e.message;
+      }
+    },
+    createProduct: async (_, args) => {
+      try {
+        let response = await Product.create(args);
         return response;
       } catch (e) {
         return e.message;
